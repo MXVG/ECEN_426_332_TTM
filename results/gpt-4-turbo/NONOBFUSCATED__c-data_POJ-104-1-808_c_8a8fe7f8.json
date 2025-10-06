@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-1-808_c_8a8fe7f8",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-1-808.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CNSsJUFX4lySmjBeM1ngifJt3oyxZ",
+    "object": "chat.completion",
+    "created": 1759708575,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C++ code defines a function `fenjie` that recursively counts the number of ways an integer `n` can be factored into integers greater than or equal to `t`. The main function reads an integer `n` which represents the number of test cases, and then for each test case, it reads an integer `k`, computes the number of ways `k` can be factored using the `fenjie` function, and prints the result.\n\nHere's a breakdown of the code:\n\n1. **Global Variable `sum`**: This variable is used to keep track of the number of factorizations found for a given integer.\n\n2. **Function `fenjie(int t, int n)`**:\n   - **Parameters**:\n     - `t`: The smallest factor to consider in the current recursive call.\n     - `n`: The number to be factored.\n   - **Base Case**: If `n` is 1, it means the product of factors leading to this call is a valid factorization, so `sum` is incremented.\n   - **Recursive Case**: The function iterates from `t` to `n`. If `n` is divisible by `i`, it recursively calls `fenjie` with `i` as the new `t` and `n/i` as the new `n`. This ensures that only factorizations where factors are non-decreasing are considered.\n\n3. **Function `main()`**:\n   - Reads the number of test cases `n`.\n   - For each test case:\n     - Reads the integer `k`.\n     - Resets `sum` to 0.\n     - Calls `fenjie(2, k)` to compute the number of factorizations of `k` starting with the smallest factor 2.\n     - Prints the value of `sum`.\n\n**Example Execution**:\nIf the input is:\n```\n3\n6\n8\n10\n```\nThe output will be:\n```\n4\n4\n4\n```\nExplanation:\n- For `6`, the factorizations are: `6`, `2*3`, `3*2`, `1*6` (though `1*6` is not counted as per the logic since the function starts from 2).\n- For `8`, the factorizations are: `8`, `2*4`, `4*2`, `2*2*2`.\n- For `10`, the factorizations are: `10`, `2*5`, `5*2",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 142,
+      "completion_tokens": 512,
+      "total_tokens": 654,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C++ code defines a function `fenjie` that recursively counts the number of ways an integer `n` can be factored into integers greater than or equal to `t`. The main function reads an integer `n` which represents the number of test cases, and then for each test case, it reads an integer `k`, computes the number of ways `k` can be factored using the `fenjie` function, and prints the result.\n\nHere's a breakdown of the code:\n\n1. **Global Variable `sum`**: This variable is used to keep track of the number of factorizations found for a given integer.\n\n2. **Function `fenjie(int t, int n)`**:\n   - **Parameters**:\n     - `t`: The smallest factor to consider in the current recursive call.\n     - `n`: The number to be factored.\n   - **Base Case**: If `n` is 1, it means the product of factors leading to this call is a valid factorization, so `sum` is incremented.\n   - **Recursive Case**: The function iterates from `t` to `n`. If `n` is divisible by `i`, it recursively calls `fenjie` with `i` as the new `t` and `n/i` as the new `n`. This ensures that only factorizations where factors are non-decreasing are considered.\n\n3. **Function `main()`**:\n   - Reads the number of test cases `n`.\n   - For each test case:\n     - Reads the integer `k`.\n     - Resets `sum` to 0.\n     - Calls `fenjie(2, k)` to compute the number of factorizations of `k` starting with the smallest factor 2.\n     - Prints the value of `sum`.\n\n**Example Execution**:\nIf the input is:\n```\n3\n6\n8\n10\n```\nThe output will be:\n```\n4\n4\n4\n```\nExplanation:\n- For `6`, the factorizations are: `6`, `2*3`, `3*2`, `1*6` (though `1*6` is not counted as per the logic since the function starts from 2).\n- For `8`, the factorizations are: `8`, `2*4`, `4*2`, `2*2*2`.\n- For `10`, the factorizations are: `10`, `2*5`, `5*2"
+}

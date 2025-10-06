@@ -1,0 +1,8 @@
+# Model endpoints configuration
+openai:
+  endpoint: https://api.openai.com/v1/chat/completions
+  model: gpt-4-turbo
+huggingface:
+  endpoint: https://api-inference.huggingface.co/models/
+  model: meta-llama/Llama-2-13b-hf
+  requests_per_minute: 60
