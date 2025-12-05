@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_nbench-emfloat_c_316c15c7",
+  "source_path": "data/raw/nonobfuscated/c-data/nbench-emfloat.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHVSi3WXerT2DDhS3LVqsZuoi3Pi",
+    "object": "chat.completion",
+    "created": 1764908090,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code is a complex implementation of floating-point arithmetic using a custom internal representation. It includes functions for setting up arrays of floating-point numbers, performing arithmetic operations (addition, subtraction, multiplication, division), and converting between integer and custom floating-point formats. The code is designed to handle special cases like zero, infinity, and NaN (Not a Number) explicitly.\n\nHere's a breakdown of the key components and functionalities:\n\n1. **Data Structures**:\n   - `InternalFPF`: A structure representing a floating-point number with fields for sign, type, exponent, and a mantissa array. The type can indicate normal numbers, zero, NaN, or infinity.\n\n2. **Utility Functions**:\n   - `SetInternalFPFZero`, `SetInternalFPFInfinity`, `SetInternalFPFNaN`: Functions to set the floating-point number to zero, infinity, and NaN, respectively.\n   - `IsMantissaZero`: Checks if the mantissa of a floating-point number is zero.\n   - `ShiftMantLeft1`, `ShiftMantRight1`: Functions to shift the mantissa of the floating-point number left or right by one bit.\n   - `Add16Bits`, `Sub16Bits`: Functions to add or subtract 16-bit integers with carry or borrow handling.\n\n3. **Arithmetic Operations**:\n   - `AddSubInternalFPF`: Performs addition or subtraction on two `InternalFPF` numbers.\n   - `MultiplyInternalFPF`: Multiplies two `InternalFPF` numbers.\n   - `DivideInternalFPF`: Divides one `InternalFPF` number by another.\n\n4. **Conversion Functions**:\n   - `n_int32ToInternalFPF`: Converts a 32-bit integer to the `InternalFPF` format.\n   - `InternalFPFToString`: Converts an `InternalFPF` number to a string representation (only available in debug mode).\n\n5. **Setup and Iteration Functions**:\n   - `SetupCPUEmFloatArrays`: Initializes arrays of `InternalFPF` numbers with random values.\n   - `DoEmFloatIteration`: Performs a series of arithmetic operations on arrays of `InternalFPF` numbers, potentially useful for benchmarking or simulation.\n\n6. **Normalization and Rounding**:\n   - `normalize`, `denormalize`: Adjust the exponent and mantissa to ensure the floating-point number is in a normalized form.\n   - `RoundInternalFPF`: Rounds the floating-point number according to",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5574,
+      "completion_tokens": 512,
+      "total_tokens": 6086,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code is a complex implementation of floating-point arithmetic using a custom internal representation. It includes functions for setting up arrays of floating-point numbers, performing arithmetic operations (addition, subtraction, multiplication, division), and converting between integer and custom floating-point formats. The code is designed to handle special cases like zero, infinity, and NaN (Not a Number) explicitly.\n\nHere's a breakdown of the key components and functionalities:\n\n1. **Data Structures**:\n   - `InternalFPF`: A structure representing a floating-point number with fields for sign, type, exponent, and a mantissa array. The type can indicate normal numbers, zero, NaN, or infinity.\n\n2. **Utility Functions**:\n   - `SetInternalFPFZero`, `SetInternalFPFInfinity`, `SetInternalFPFNaN`: Functions to set the floating-point number to zero, infinity, and NaN, respectively.\n   - `IsMantissaZero`: Checks if the mantissa of a floating-point number is zero.\n   - `ShiftMantLeft1`, `ShiftMantRight1`: Functions to shift the mantissa of the floating-point number left or right by one bit.\n   - `Add16Bits`, `Sub16Bits`: Functions to add or subtract 16-bit integers with carry or borrow handling.\n\n3. **Arithmetic Operations**:\n   - `AddSubInternalFPF`: Performs addition or subtraction on two `InternalFPF` numbers.\n   - `MultiplyInternalFPF`: Multiplies two `InternalFPF` numbers.\n   - `DivideInternalFPF`: Divides one `InternalFPF` number by another.\n\n4. **Conversion Functions**:\n   - `n_int32ToInternalFPF`: Converts a 32-bit integer to the `InternalFPF` format.\n   - `InternalFPFToString`: Converts an `InternalFPF` number to a string representation (only available in debug mode).\n\n5. **Setup and Iteration Functions**:\n   - `SetupCPUEmFloatArrays`: Initializes arrays of `InternalFPF` numbers with random values.\n   - `DoEmFloatIteration`: Performs a series of arithmetic operations on arrays of `InternalFPF` numbers, potentially useful for benchmarking or simulation.\n\n6. **Normalization and Rounding**:\n   - `normalize`, `denormalize`: Adjust the exponent and mantissa to ensure the floating-point number is in a normalized form.\n   - `RoundInternalFPF`: Rounds the floating-point number according to"
+}

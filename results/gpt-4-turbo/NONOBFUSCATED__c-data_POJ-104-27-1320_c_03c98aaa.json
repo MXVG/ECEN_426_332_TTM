@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-27-1320_c_03c98aaa",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-27-1320.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHBHB9CJgzv08Av4oMs45HyDw3Nk",
+    "object": "chat.completion",
+    "created": 1764906839,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C program calculates the roots of a quadratic equation based on the coefficients \\(a\\), \\(b\\), and \\(c\\) entered by the user. The program processes multiple sets of coefficients, with the number of sets specified by the user. Here's a breakdown of the program's functionality:\n\n1. **Variable Declaration**: The program declares variables `a`, `b`, `c` (coefficients of the quadratic equation), `d` (discriminant), `e`, `f`, `g` (used for complex roots), `x1`, `x2` (roots), `n` (number of equations to process), and `i` (loop counter).\n\n2. **Input Number of Equations**: The user is prompted to enter the number of quadratic equations they want to solve (`n`).\n\n3. **Loop Through Each Equation**:\n   - For each equation, the coefficients `a`, `b`, and `c` are read.\n   - The discriminant `d` is calculated using the formula \\(d = b^2 - 4ac\\).\n\n4. **Root Calculation**:\n   - **If \\(d > 0\\)**: The equation has two distinct real roots. These are calculated using:\n     - \\(x1 = \\frac{-b + \\sqrt{d}}{2a}\\)\n     - \\(x2 = \\frac{-b - \\sqrt{d}}{2a}\\)\n     - The roots are printed.\n   - **If \\(d = 0\\)**: The equation has a double root (real and equal). It is calculated using:\n     - \\(x1 = x2 = \\frac{-b}{2a}\\)\n     - The root is printed.\n   - **If \\(d < 0\\)**: The equation has complex roots. The real and imaginary parts are calculated using:\n     - \\(e = -d\\) (to make the square root positive)\n     - \\(f = \\frac{\\sqrt{e}}{2a}\\) (imaginary part)\n     - \\(g = \\frac{-b}{2a}\\) (real part)\n     - The complex roots are printed in the form \\(g + fi\\) and \\(g - fi\\).\n\n5. **End of Program**: The loop continues until all equations have been processed.\n\n### Corrections and Improvements:\n- The check `if (b == 0)` within the `d > 0` condition is unnecessary and incorrect because the calculation of",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 368,
+      "completion_tokens": 512,
+      "total_tokens": 880,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C program calculates the roots of a quadratic equation based on the coefficients \\(a\\), \\(b\\), and \\(c\\) entered by the user. The program processes multiple sets of coefficients, with the number of sets specified by the user. Here's a breakdown of the program's functionality:\n\n1. **Variable Declaration**: The program declares variables `a`, `b`, `c` (coefficients of the quadratic equation), `d` (discriminant), `e`, `f`, `g` (used for complex roots), `x1`, `x2` (roots), `n` (number of equations to process), and `i` (loop counter).\n\n2. **Input Number of Equations**: The user is prompted to enter the number of quadratic equations they want to solve (`n`).\n\n3. **Loop Through Each Equation**:\n   - For each equation, the coefficients `a`, `b`, and `c` are read.\n   - The discriminant `d` is calculated using the formula \\(d = b^2 - 4ac\\).\n\n4. **Root Calculation**:\n   - **If \\(d > 0\\)**: The equation has two distinct real roots. These are calculated using:\n     - \\(x1 = \\frac{-b + \\sqrt{d}}{2a}\\)\n     - \\(x2 = \\frac{-b - \\sqrt{d}}{2a}\\)\n     - The roots are printed.\n   - **If \\(d = 0\\)**: The equation has a double root (real and equal). It is calculated using:\n     - \\(x1 = x2 = \\frac{-b}{2a}\\)\n     - The root is printed.\n   - **If \\(d < 0\\)**: The equation has complex roots. The real and imaginary parts are calculated using:\n     - \\(e = -d\\) (to make the square root positive)\n     - \\(f = \\frac{\\sqrt{e}}{2a}\\) (imaginary part)\n     - \\(g = \\frac{-b}{2a}\\) (real part)\n     - The complex roots are printed in the form \\(g + fi\\) and \\(g - fi\\).\n\n5. **End of Program**: The loop continues until all equations have been processed.\n\n### Corrections and Improvements:\n- The check `if (b == 0)` within the `d > 0` condition is unnecessary and incorrect because the calculation of"
+}

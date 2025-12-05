@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-localstorage-app_javascript_4a5a8c2d",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-localstorage-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHZ7I6ig04vSttHLkrmKbXacKkue",
+    "object": "chat.completion",
+    "created": 1764908317,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The JavaScript code you provided demonstrates several concepts including local storage manipulation, event handling, and dynamic HTML content manipulation. Here's a breakdown of what each part of the script does:\n\n1. **Storing and Retrieving Data from Local Storage:**\n   - The script stores a string value ('jaime') under the key 'nombreUsuario' in the browser's local storage.\n   - It then retrieves this value from local storage and logs it to the console.\n\n2. **Dynamic Background Color Management:**\n   - The script checks if there is a stored background color (`colorFondo`) in local storage upon loading. If not found, it sets the background class to 'bg-dark'. If found, it applies the stored class to the `fondo` element.\n\n3. **Event Listener Initialization:**\n   - Two self-invoking functions are used to set up event listeners:\n     - One for a button (`btnBotones`) which, when clicked, triggers the `agregarBotones` function to dynamically create multiple buttons.\n     - Another listener on the `botones` container to handle click events on the dynamically created buttons using event delegation.\n\n4. **Dynamic Button Creation:**\n   - The `agregarBotones` function generates HTML for five buttons with different Bootstrap classes and inserts this HTML into the `botones` element.\n\n5. **Event Delegation for Button Clicks:**\n   - The `delegacion` function handles clicks on any of the dynamically created buttons. It uses the second class of the clicked button (e.g., 'btn-primary') to determine the background color to apply to the `fondo` element.\n   - It then updates the `fondo` element's class to reflect the selected color and stores this choice in local storage.\n\nThis script effectively demonstrates how to use local storage to persist user settings (like a chosen background color) across sessions. It also shows how to handle events on dynamically created elements, a common scenario in modern web applications. The use of Bootstrap classes for styling and immediate visual feedback makes the example visually intuitive.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 424,
+      "completion_tokens": 420,
+      "total_tokens": 844,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The JavaScript code you provided demonstrates several concepts including local storage manipulation, event handling, and dynamic HTML content manipulation. Here's a breakdown of what each part of the script does:\n\n1. **Storing and Retrieving Data from Local Storage:**\n   - The script stores a string value ('jaime') under the key 'nombreUsuario' in the browser's local storage.\n   - It then retrieves this value from local storage and logs it to the console.\n\n2. **Dynamic Background Color Management:**\n   - The script checks if there is a stored background color (`colorFondo`) in local storage upon loading. If not found, it sets the background class to 'bg-dark'. If found, it applies the stored class to the `fondo` element.\n\n3. **Event Listener Initialization:**\n   - Two self-invoking functions are used to set up event listeners:\n     - One for a button (`btnBotones`) which, when clicked, triggers the `agregarBotones` function to dynamically create multiple buttons.\n     - Another listener on the `botones` container to handle click events on the dynamically created buttons using event delegation.\n\n4. **Dynamic Button Creation:**\n   - The `agregarBotones` function generates HTML for five buttons with different Bootstrap classes and inserts this HTML into the `botones` element.\n\n5. **Event Delegation for Button Clicks:**\n   - The `delegacion` function handles clicks on any of the dynamically created buttons. It uses the second class of the clicked button (e.g., 'btn-primary') to determine the background color to apply to the `fondo` element.\n   - It then updates the `fondo` element's class to reflect the selected color and stores this choice in local storage.\n\nThis script effectively demonstrates how to use local storage to persist user settings (like a chosen background color) across sessions. It also shows how to handle events on dynamically created elements, a common scenario in modern web applications. The use of Bootstrap classes for styling and immediate visual feedback makes the example visually intuitive."
+}

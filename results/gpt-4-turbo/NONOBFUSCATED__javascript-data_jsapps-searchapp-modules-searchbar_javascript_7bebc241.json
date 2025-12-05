@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-searchapp-modules-searchbar_javascript_7bebc241",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-searchapp-modules-searchbar.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHaSScsqstCBu7SpjFG9EiTbCyvL",
+    "object": "chat.completion",
+    "created": 1764908400,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The JavaScript code you've provided defines a set of utility functions related to handling search input functionality in a web application. Here's a breakdown of each function and how they operate:\n\n1. **`setSearchFocus`**:\n   - This function sets the focus to an HTML element with the ID `\"search\"`. This is typically used to automatically focus the user's cursor in the search input field, making it ready for input immediately when needed.\n\n2. **`showClearTextButton`**:\n   - This function toggles the visibility of a clear button (an element with the ID `\"clear\"`) based on whether there is any text in the search input field (an element with the ID `\"search\"`).\n   - If there is text in the input field (`search.value.length > 0`), it changes the class of the clear button to `\"flex\"`, making it visible and presumably styled with `display: flex`.\n   - If the input field is empty, it changes the class of the clear button to `\"none\"`, likely hiding it (assuming `.none { display: none; }` in CSS).\n\n3. **`clearSearchText`**:\n   - This function is triggered to clear the text in the search input when an event (like a button click) occurs. It prevents the default action of the event (`e.preventDefault()`), clears the input field, hides the clear button by changing its class to `\"none\"`, and then sets the focus back to the search input field using `setSearchFocus()`.\n\n4. **`clearPushListener`**:\n   - This function is designed to listen for specific key presses (either the \"Enter\" or \"Space\" key) and, upon detecting one of these keys, it triggers the clear button's click action programmatically.\n   - This is useful for accessibility, allowing users to clear the search input using the keyboard instead of requiring a mouse click.\n\n### Usage Example:\nThese functions can be used in a web application where a search functionality is a key feature. For instance, in a product search on an e-commerce site, users can quickly enter search terms, clear them with a visible button or keyboard shortcuts, and have immediate focus adjustments for a seamless experience.\n\n### HTML Structure Example:\nTo use these functions, your HTML might look something like this:\n```html\n<input type=\"text\" id=\"search\" placeholder=\"Search...\">\n<button id=\"clear\" class=\"none\">Clear</button>\n```\n\n### CSS for Visibility Control:\n```css\n.none {",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 199,
+      "completion_tokens": 512,
+      "total_tokens": 711,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The JavaScript code you've provided defines a set of utility functions related to handling search input functionality in a web application. Here's a breakdown of each function and how they operate:\n\n1. **`setSearchFocus`**:\n   - This function sets the focus to an HTML element with the ID `\"search\"`. This is typically used to automatically focus the user's cursor in the search input field, making it ready for input immediately when needed.\n\n2. **`showClearTextButton`**:\n   - This function toggles the visibility of a clear button (an element with the ID `\"clear\"`) based on whether there is any text in the search input field (an element with the ID `\"search\"`).\n   - If there is text in the input field (`search.value.length > 0`), it changes the class of the clear button to `\"flex\"`, making it visible and presumably styled with `display: flex`.\n   - If the input field is empty, it changes the class of the clear button to `\"none\"`, likely hiding it (assuming `.none { display: none; }` in CSS).\n\n3. **`clearSearchText`**:\n   - This function is triggered to clear the text in the search input when an event (like a button click) occurs. It prevents the default action of the event (`e.preventDefault()`), clears the input field, hides the clear button by changing its class to `\"none\"`, and then sets the focus back to the search input field using `setSearchFocus()`.\n\n4. **`clearPushListener`**:\n   - This function is designed to listen for specific key presses (either the \"Enter\" or \"Space\" key) and, upon detecting one of these keys, it triggers the clear button's click action programmatically.\n   - This is useful for accessibility, allowing users to clear the search input using the keyboard instead of requiring a mouse click.\n\n### Usage Example:\nThese functions can be used in a web application where a search functionality is a key feature. For instance, in a product search on an e-commerce site, users can quickly enter search terms, clear them with a visible button or keyboard shortcuts, and have immediate focus adjustments for a seamless experience.\n\n### HTML Structure Example:\nTo use these functions, your HTML might look something like this:\n```html\n<input type=\"text\" id=\"search\" placeholder=\"Search...\">\n<button id=\"clear\" class=\"none\">Clear</button>\n```\n\n### CSS for Visibility Control:\n```css\n.none {"
+}

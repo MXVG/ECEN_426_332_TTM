@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/split-string_jsapps-searchapp-main_javascript_8e4a5f73",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/split-string/jsapps-searchapp-main.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIueHPYXUjFepNEKUFigXWZDvBze",
+    "object": "chat.completion",
+    "created": 1764913496,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided appears to be JavaScript that has been obfuscated, which means it has been transformed to make it harder to understand and reverse-engineer. This is often done to protect intellectual property or to minimize the file size. However, I'll break down the key components and functionalities of this script based on the provided code.\n\n### Overview\nThe script seems to be part of a web application related to a search functionality. It imports several functions from modules related to managing a search bar and search results. It sets up event listeners to handle user interactions and to initialize the application when the document is ready.\n\n### Key Functions and Event Listeners\n\n1. **Document Ready Event Listener:**\n   - The script listens for a change in the document's ready state. When the document is fully loaded (`complete`), it calls the `initApp` function.\n\n2. **initApp Function:**\n   - Sets the focus on the search input field.\n   - Adds event listeners to the search input to show a clear text button when appropriate.\n   - Adds event listeners to a clear button to clear the search text and to handle other clear-related functionalities.\n   - Adds an event listener to the search form's submit button to handle the search submission.\n\n3. **submitSearch Function:**\n   - Prevents the default form submission to handle it via JavaScript.\n   - Clears any existing search results.\n   - Calls `processSearch` to perform the search operation.\n   - Resets the focus on the search input field after the search.\n\n4. **processSearch Function:**\n   - Clears any existing statistics line.\n   - Retrieves the search term from the input field.\n   - If the search term is not empty, it retrieves search results (presumably from a server or local data) and then displays these results and updates the statistics line accordingly.\n\n### Imported Functions (from `./modules/`):\n- **Search Bar Related:**\n  - `setSearchFocus`: Likely sets focus to the search input.\n  - `showClearTextButton`: Shows a button to clear text when there is text in the input.\n  - `clearSearchText`: Clears the text from the search input.\n  - `clearPushListener`: Additional functionality related to clearing operations.\n\n- **Data Functions:**\n  - `getSearchTerm`: Retrieves the current search term from the input.\n  - `retrieveSearchResults`: Fetches search results based on the search term.\n\n- **Search Results Related:**\n  - `deleteSearchResults`: Clears current search results",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1350,
+      "completion_tokens": 512,
+      "total_tokens": 1862,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided appears to be JavaScript that has been obfuscated, which means it has been transformed to make it harder to understand and reverse-engineer. This is often done to protect intellectual property or to minimize the file size. However, I'll break down the key components and functionalities of this script based on the provided code.\n\n### Overview\nThe script seems to be part of a web application related to a search functionality. It imports several functions from modules related to managing a search bar and search results. It sets up event listeners to handle user interactions and to initialize the application when the document is ready.\n\n### Key Functions and Event Listeners\n\n1. **Document Ready Event Listener:**\n   - The script listens for a change in the document's ready state. When the document is fully loaded (`complete`), it calls the `initApp` function.\n\n2. **initApp Function:**\n   - Sets the focus on the search input field.\n   - Adds event listeners to the search input to show a clear text button when appropriate.\n   - Adds event listeners to a clear button to clear the search text and to handle other clear-related functionalities.\n   - Adds an event listener to the search form's submit button to handle the search submission.\n\n3. **submitSearch Function:**\n   - Prevents the default form submission to handle it via JavaScript.\n   - Clears any existing search results.\n   - Calls `processSearch` to perform the search operation.\n   - Resets the focus on the search input field after the search.\n\n4. **processSearch Function:**\n   - Clears any existing statistics line.\n   - Retrieves the search term from the input field.\n   - If the search term is not empty, it retrieves search results (presumably from a server or local data) and then displays these results and updates the statistics line accordingly.\n\n### Imported Functions (from `./modules/`):\n- **Search Bar Related:**\n  - `setSearchFocus`: Likely sets focus to the search input.\n  - `showClearTextButton`: Shows a button to clear text when there is text in the input.\n  - `clearSearchText`: Clears the text from the search input.\n  - `clearPushListener`: Additional functionality related to clearing operations.\n\n- **Data Functions:**\n  - `getSearchTerm`: Retrieves the current search term from the input.\n  - `retrieveSearchResults`: Fetches search results based on the search term.\n\n- **Search Results Related:**\n  - `deleteSearchResults`: Clears current search results"
+}

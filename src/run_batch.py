@@ -7,16 +7,19 @@ from typing import Iterable, Protocol
 from .schema import BatchRunConfig, ManifestRecord
 from .utils_io import read_jsonl
 from .model_clients.openai_client import OpenAIClient
+from .model_clients.hf_client import HuggingFaceClient
 
 RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 
 
 class SupportsGenerate(Protocol):
     def generate(self, prompt: str, **kwargs: object) -> dict:
+        """Return a provider-specific response payload for the supplied prompt."""
         ...
 
 
 def load_manifest(path: str) -> Iterable[ManifestRecord]:
+    """Read rows from a manifest JSONL file and yield ManifestRecord objects."""
     file_path = Path(path)
     for row in read_jsonl(file_path):
         yield ManifestRecord(
@@ -29,15 +32,23 @@ def load_manifest(path: str) -> Iterable[ManifestRecord]:
 
 
 def run(records: Iterable[ManifestRecord], client: SupportsGenerate, config: BatchRunConfig) -> None:
+    """Send each manifest record through the client and dispatch the responses for handling."""
     for record in records:
         source_text = record.path.read_text(encoding="utf-8")
-        response = client.generate(source_text, config=config)
+        try:
+            response = client.generate(source_text, config=config)
+        except RuntimeError as exc:
+            if "token" in str(exc).lower():
+                print(f"Skipping {record.identifier}: {exc}")
+                continue
+            raise
         formatter = getattr(client, "format_response", None)
         formatted = formatter(response) if callable(formatter) else None
         _handle_response(record, response, formatted, config)
 
 
 def _handle_response(record: ManifestRecord, response: dict, formatted: str | None, config: BatchRunConfig) -> None:
+    """Persist the response artifacts for a record and report minimal progress output."""
     # Persist response payloads for later inspection.
     _store_response(record, response, formatted, config)
     print(record.identifier)
@@ -46,6 +57,7 @@ def _handle_response(record: ManifestRecord, response: dict, formatted: str | No
 
 
 def _store_response(record: ManifestRecord, response: dict, formatted: str | None, config: BatchRunConfig) -> None:
+    """Serialize the record response data into the results directory for later inspection."""
     result_dir = RESULTS_DIR / config.model_name
     result_dir.mkdir(parents=True, exist_ok=True)
 
@@ -68,6 +80,7 @@ def _store_response(record: ManifestRecord, response: dict, formatted: str | Non
 
 
 def main(manifest_path: str, client: SupportsGenerate, config: BatchRunConfig) -> None:
+    """Entry point used by scripts to load a manifest and process it with the provided client."""
     records = load_manifest(manifest_path)
     run(records, client, config)
 
@@ -82,6 +95,8 @@ if __name__ == "__main__":
     parser.add_argument("--api-key", default=None, help="API key (defaults to OPENAI_API_KEY env var).")
     parser.add_argument("--model", default="gpt-4-turbo", help="model name to invoke.")
     parser.add_argument("--endpoint", default=None, help="Override the API endpoint URL.")
+    parser.add_argument("--client", choices=["openai", "huggingface"], default="openai", help="Which model client implementation to use.")
+    parser.add_argument("--hf-provider", default=None, help="Optional Hugging Face routing provider identifier.")
     parser.add_argument("--temperature", type=float, default=0.0, help="Sampling temperature for the request.")
     parser.add_argument("--max-input-tokens", type=int, default=4096, help="Hint for maximum prompt tokens.")
     parser.add_argument("--max-output-tokens", type=int, default=512, help="Maximum completion tokens to request.")
@@ -89,10 +104,18 @@ if __name__ == "__main__":
     parser.add_argument("--batch-size", type=int, default=1, help="Batch size metadata for the run.")
     args = parser.parse_args()
 
-    client_kwargs = {"api_key": args.api_key, "model": args.model}
-    if args.endpoint:
-        client_kwargs["endpoint"] = args.endpoint
-    client = OpenAIClient(**{k: v for k, v in client_kwargs.items() if v is not None})
+    if args.client == "huggingface":
+        client_kwargs = {"api_token": args.api_key, "model": args.model}
+        if args.endpoint:
+            client_kwargs["endpoint"] = args.endpoint
+        if args.hf_provider:
+            client_kwargs["provider"] = args.hf_provider
+        client = HuggingFaceClient(**{k: v for k, v in client_kwargs.items() if v is not None})
+    else:
+        client_kwargs = {"api_key": args.api_key, "model": args.model}
+        if args.endpoint:
+            client_kwargs["endpoint"] = args.endpoint
+        client = OpenAIClient(**{k: v for k, v in client_kwargs.items() if v is not None})
 
     config = BatchRunConfig(
         model_name=args.model,

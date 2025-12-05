@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/wobfuscator_jsapps-searchapp-modules-searchresults_javascript_cf006205",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/wobfuscator/jsapps-searchapp-modules-searchresults.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjJ0fFj5C7qFMiBTL5eCUEXbxL3Yz",
+    "object": "chat.completion",
+    "created": 1764913869,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "This JavaScript code is a complex example that integrates WebAssembly (Wasm) modules into a web application, specifically for handling search results and manipulating the Document Object Model (DOM). The code is structured to use WebAssembly for various tasks, such as deleting search results, building search results, and updating the user interface. Here's a breakdown of the key components and functionalities:\n\n### Key Components:\n\n1. **WebAssembly Modules**:\n   - The code defines several WebAssembly modules (`__forWasmModule`, `__ifWasmModule`, `__callWasmModule`, `__wasmStringModules`) which are compiled from base64-encoded strings. These modules are used to perform specific tasks in the application.\n\n2. **Universal Base64 to Byte Array Function (`__universalAtob`)**:\n   - This function converts a base64-encoded string to a `Uint8Array`. It tries to use the browser's `atob` function and falls back to Node.js's `Buffer.from` if `atob` fails.\n\n3. **Functions to Manipulate DOM**:\n   - `deleteSearchResults`: Removes all child elements from a specific parent element in the DOM.\n   - `buildSearchResults`: Creates and appends elements to display search results.\n   - `createResultItem`, `createResultImage`, `createResultText`: Helper functions to create DOM elements for individual parts of a search result.\n\n4. **Utility Functions**:\n   - `lS`: A function to extract strings from WebAssembly memory, used for getting element IDs and class names.\n   - `clearStatsLine`, `setStatsLine`: Functions to update the statistics line on the webpage.\n\n### Functionality:\n\n- **WebAssembly Integration**:\n  - The code uses WebAssembly instances to perform tasks typically handled by JavaScript, such as DOM manipulation and conditional logic. This is done by passing JavaScript functions (`impFunc`, `impFunc1`, `impFunc2`) to the WebAssembly environment, which are then invoked from within the Wasm modules.\n\n- **Dynamic Content Management**:\n  - Functions like `deleteSearchResults` and `buildSearchResults` dynamically manage content on the webpage by creating, modifying, and deleting DOM elements based on search results.\n\n- **Handling Search Results**:\n  - The application appears to handle search results obtained from an external source (possibly fetched asynchronously). These results are processed and displayed on the webpage using various DOM manipulation techniques.\n\n### Usage:\n\nThis script is likely part of a larger application, possibly a",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3486,
+      "completion_tokens": 512,
+      "total_tokens": 3998,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "This JavaScript code is a complex example that integrates WebAssembly (Wasm) modules into a web application, specifically for handling search results and manipulating the Document Object Model (DOM). The code is structured to use WebAssembly for various tasks, such as deleting search results, building search results, and updating the user interface. Here's a breakdown of the key components and functionalities:\n\n### Key Components:\n\n1. **WebAssembly Modules**:\n   - The code defines several WebAssembly modules (`__forWasmModule`, `__ifWasmModule`, `__callWasmModule`, `__wasmStringModules`) which are compiled from base64-encoded strings. These modules are used to perform specific tasks in the application.\n\n2. **Universal Base64 to Byte Array Function (`__universalAtob`)**:\n   - This function converts a base64-encoded string to a `Uint8Array`. It tries to use the browser's `atob` function and falls back to Node.js's `Buffer.from` if `atob` fails.\n\n3. **Functions to Manipulate DOM**:\n   - `deleteSearchResults`: Removes all child elements from a specific parent element in the DOM.\n   - `buildSearchResults`: Creates and appends elements to display search results.\n   - `createResultItem`, `createResultImage`, `createResultText`: Helper functions to create DOM elements for individual parts of a search result.\n\n4. **Utility Functions**:\n   - `lS`: A function to extract strings from WebAssembly memory, used for getting element IDs and class names.\n   - `clearStatsLine`, `setStatsLine`: Functions to update the statistics line on the webpage.\n\n### Functionality:\n\n- **WebAssembly Integration**:\n  - The code uses WebAssembly instances to perform tasks typically handled by JavaScript, such as DOM manipulation and conditional logic. This is done by passing JavaScript functions (`impFunc`, `impFunc1`, `impFunc2`) to the WebAssembly environment, which are then invoked from within the Wasm modules.\n\n- **Dynamic Content Management**:\n  - Functions like `deleteSearchResults` and `buildSearchResults` dynamically manage content on the webpage by creating, modifying, and deleting DOM elements based on search results.\n\n- **Handling Search Results**:\n  - The application appears to handle search results obtained from an external source (possibly fetched asynchronously). These results are processed and displayed on the webpage using various DOM manipulation techniques.\n\n### Usage:\n\nThis script is likely part of a larger application, possibly a"
+}

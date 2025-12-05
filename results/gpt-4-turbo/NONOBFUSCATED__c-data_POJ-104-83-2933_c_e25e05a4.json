@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-83-2933_c_e25e05a4",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-83-2933.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHNymvNLdERo62DBFj70Ekeb3OYr",
+    "object": "chat.completion",
+    "created": 1764907626,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C program calculates the Grade Point Average (GPA) for a student based on their course credits and grades. Here's a breakdown of how the program works:\n\n1. **Variable Declaration:**\n   - `int n`: Number of courses.\n   - `int a[10]`: Array to store the credits of each course.\n   - `int b[10]`: Array to store the grades of each course.\n   - `double s=0`: Summation variable for the weighted grades.\n   - `double c[10]`: Array to store the grade points corresponding to the grades in `b`.\n   - `double GPA`: Variable to store the calculated GPA.\n   - `double t=0`: Total credits.\n\n2. **Input:**\n   - The program first takes an integer input `n`, which is the number of courses.\n   - It then reads `n` integers into the array `a`, which represent the credits for each course.\n   - Next, it reads `n` integers into the array `b`, which represent the grades for each course.\n\n3. **Grade Point Calculation:**\n   - The program uses a series of `if` statements to assign a grade point to each grade in the array `b` based on common grading scales and stores these in the array `c`.\n   - The grade points are assigned as follows:\n     - 90-100: 4.0\n     - 85-89: 3.7\n     - 82-84: 3.3\n     - 78-81: 3.0\n     - 75-77: 2.7\n     - 72-74: 2.3\n     - 68-71: 2.0\n     - 64-67: 1.5\n     - 60-63: 1.0\n     - Below 60: 0.0\n\n4. **GPA Calculation:**\n   - The program calculates the total credits `t` by summing up the credits from array `a`.\n   - It then calculates the weighted sum `s` by multiplying each course's credits by its corresponding grade point and summing these products.\n   - The GPA is then calculated as `GPA = s / t`.\n\n5. **Output:**\n   - Finally, the program prints the GPA rounded to two decimal places.\n\n6. **Return Statement:**\n   - The program returns 0, indicating successful",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 374,
+      "completion_tokens": 512,
+      "total_tokens": 886,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C program calculates the Grade Point Average (GPA) for a student based on their course credits and grades. Here's a breakdown of how the program works:\n\n1. **Variable Declaration:**\n   - `int n`: Number of courses.\n   - `int a[10]`: Array to store the credits of each course.\n   - `int b[10]`: Array to store the grades of each course.\n   - `double s=0`: Summation variable for the weighted grades.\n   - `double c[10]`: Array to store the grade points corresponding to the grades in `b`.\n   - `double GPA`: Variable to store the calculated GPA.\n   - `double t=0`: Total credits.\n\n2. **Input:**\n   - The program first takes an integer input `n`, which is the number of courses.\n   - It then reads `n` integers into the array `a`, which represent the credits for each course.\n   - Next, it reads `n` integers into the array `b`, which represent the grades for each course.\n\n3. **Grade Point Calculation:**\n   - The program uses a series of `if` statements to assign a grade point to each grade in the array `b` based on common grading scales and stores these in the array `c`.\n   - The grade points are assigned as follows:\n     - 90-100: 4.0\n     - 85-89: 3.7\n     - 82-84: 3.3\n     - 78-81: 3.0\n     - 75-77: 2.7\n     - 72-74: 2.3\n     - 68-71: 2.0\n     - 64-67: 1.5\n     - 60-63: 1.0\n     - Below 60: 0.0\n\n4. **GPA Calculation:**\n   - The program calculates the total credits `t` by summing up the credits from array `a`.\n   - It then calculates the weighted sum `s` by multiplying each course's credits by its corresponding grade point and summing these products.\n   - The GPA is then calculated as `GPA = s / t`.\n\n5. **Output:**\n   - Finally, the program prints the GPA rounded to two decimal places.\n\n6. **Return Statement:**\n   - The program returns 0, indicating successful"
+}

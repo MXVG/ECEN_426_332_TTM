@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-72-578_c_17a6ae62",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-72-578.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHL3F3CQGUFXwn6XWSYOZem1iAX1",
+    "object": "chat.completion",
+    "created": 1764907445,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code snippet defines a program that reads a matrix of integers from the user, and then identifies and prints the positions of all local maxima in the matrix. A local maximum is defined as an element that is greater than or equal to its immediate neighbors (up, down, left, and right). Here's a breakdown of the program:\n\n1. **Variable Declaration and Initialization**:\n   - `int a[21][21]`: Declares a 21x21 integer matrix `a`.\n   - `int i, j, k, m, n`: Declares integers for loop counters and matrix dimensions.\n   - The nested loops initialize all elements of matrix `a` to 0.\n\n2. **Input**:\n   - `scanf(\"%d %d\", &m, &n)`: Reads two integers from the user, which represent the number of rows (`m`) and columns (`n`) of the submatrix that will be used.\n   - The nested loops then read `m` rows and `n` columns of integers into the matrix `a`, starting from index `[1][1]`. This leaves a border of zeros around the entered matrix, which simplifies boundary checks for local maxima.\n\n3. **Finding and Printing Local Maxima**:\n   - The outer loop iterates over each row of the user-defined submatrix (from 1 to `m`), and the inner loop iterates over each column (from 1 to `n`).\n   - For each element `a[i][j]`, the program checks if it is greater than or equal to its neighbors: `a[i-1][j]` (above), `a[i][j-1]` (left), `a[i+1][j]` (below), and `a[i][j+1]` (right).\n   - If `a[i][j]` is a local maximum, the program prints the zero-based indices `(i-1, j-1)` of this element in the matrix. The indices are adjusted by subtracting 1 because the matrix was filled starting from index `[1][1]`.\n\n**Key Points**:\n- The matrix is effectively padded with a border of zeros, which simplifies the check for local maxima at the edges of the matrix because any element on the border will not be considered greater than the padded zeros.\n- The program outputs the positions of the local maxima in zero-based index format, which is typical in programming but might differ",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 196,
+      "completion_tokens": 512,
+      "total_tokens": 708,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code snippet defines a program that reads a matrix of integers from the user, and then identifies and prints the positions of all local maxima in the matrix. A local maximum is defined as an element that is greater than or equal to its immediate neighbors (up, down, left, and right). Here's a breakdown of the program:\n\n1. **Variable Declaration and Initialization**:\n   - `int a[21][21]`: Declares a 21x21 integer matrix `a`.\n   - `int i, j, k, m, n`: Declares integers for loop counters and matrix dimensions.\n   - The nested loops initialize all elements of matrix `a` to 0.\n\n2. **Input**:\n   - `scanf(\"%d %d\", &m, &n)`: Reads two integers from the user, which represent the number of rows (`m`) and columns (`n`) of the submatrix that will be used.\n   - The nested loops then read `m` rows and `n` columns of integers into the matrix `a`, starting from index `[1][1]`. This leaves a border of zeros around the entered matrix, which simplifies boundary checks for local maxima.\n\n3. **Finding and Printing Local Maxima**:\n   - The outer loop iterates over each row of the user-defined submatrix (from 1 to `m`), and the inner loop iterates over each column (from 1 to `n`).\n   - For each element `a[i][j]`, the program checks if it is greater than or equal to its neighbors: `a[i-1][j]` (above), `a[i][j-1]` (left), `a[i+1][j]` (below), and `a[i][j+1]` (right).\n   - If `a[i][j]` is a local maximum, the program prints the zero-based indices `(i-1, j-1)` of this element in the matrix. The indices are adjusted by subtracting 1 because the matrix was filled starting from index `[1][1]`.\n\n**Key Points**:\n- The matrix is effectively padded with a border of zeros, which simplifies the check for local maxima at the edges of the matrix because any element on the border will not be considered greater than the padded zeros.\n- The program outputs the positions of the local maxima in zero-based index format, which is typical in programming but might differ"
+}

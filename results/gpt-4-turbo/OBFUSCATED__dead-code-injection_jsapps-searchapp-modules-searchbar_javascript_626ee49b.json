@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/dead-code-injection_jsapps-searchapp-modules-searchbar_javascript_626ee49b",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/dead-code-injection/jsapps-searchapp-modules-searchbar.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjImMopN7D16bd2DP5qPYObEr4qvG",
+    "object": "chat.completion",
+    "created": 1764912982,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code snippet appears to be a JavaScript module that has been obfuscated, likely to protect its logic or to make it harder to understand. It includes several exported functions that manipulate the DOM, particularly focusing on search input functionality in a web application. Here’s a breakdown of the functionality based on the deciphered parts of the code:\n\n1. **setSearchFocus()**:\n   - This function sets the focus to an element with the ID 'search'.\n\n2. **showClearTextButton()**:\n   - This function checks if the search input (element with ID 'search') has any text.\n   - If there is text, it shows a button (by manipulating CSS classes to hide and show the button) that presumably allows the user to clear the search input.\n   - If there is no text, it ensures that the button is hidden.\n\n3. **clearSearchText(event)**:\n   - This function is triggered by an event (likely a click event on the clear button).\n   - It prevents the default action of the event, clears the search input, hides the clear button, and sets the focus back to the search input.\n\n4. **clearPushListener(event)**:\n   - This function logs the key pressed by the user.\n   - If the key pressed is 'Enter' or 'Space', it prevents the default action (which might be form submission or other default key actions), and triggers a click event on the clear button.\n\nThe obfuscated parts of the code use hexadecimal values and a mapping function to convert strings and numbers, which makes it difficult to read directly without converting those values back to their original form. The purpose of such obfuscation could be to protect proprietary logic or to prevent easy tampering with the code.\n\nOverall, this module enhances the user interface of a search input by adding focus management, and show/hide logic for a clear button based on the input state, and handling specific keyboard events to improve usability.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1401,
+      "completion_tokens": 394,
+      "total_tokens": 1795,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code snippet appears to be a JavaScript module that has been obfuscated, likely to protect its logic or to make it harder to understand. It includes several exported functions that manipulate the DOM, particularly focusing on search input functionality in a web application. Here’s a breakdown of the functionality based on the deciphered parts of the code:\n\n1. **setSearchFocus()**:\n   - This function sets the focus to an element with the ID 'search'.\n\n2. **showClearTextButton()**:\n   - This function checks if the search input (element with ID 'search') has any text.\n   - If there is text, it shows a button (by manipulating CSS classes to hide and show the button) that presumably allows the user to clear the search input.\n   - If there is no text, it ensures that the button is hidden.\n\n3. **clearSearchText(event)**:\n   - This function is triggered by an event (likely a click event on the clear button).\n   - It prevents the default action of the event, clears the search input, hides the clear button, and sets the focus back to the search input.\n\n4. **clearPushListener(event)**:\n   - This function logs the key pressed by the user.\n   - If the key pressed is 'Enter' or 'Space', it prevents the default action (which might be form submission or other default key actions), and triggers a click event on the clear button.\n\nThe obfuscated parts of the code use hexadecimal values and a mapping function to convert strings and numbers, which makes it difficult to read directly without converting those values back to their original form. The purpose of such obfuscation could be to protect proprietary logic or to prevent easy tampering with the code.\n\nOverall, this module enhances the user interface of a search input by adding focus management, and show/hide logic for a clear button based on the input state, and handling specific keyboard events to improve usability."
+}

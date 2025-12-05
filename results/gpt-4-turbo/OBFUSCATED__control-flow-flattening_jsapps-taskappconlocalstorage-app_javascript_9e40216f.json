@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-taskappconlocalstorage-app_javascript_9e40216f",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-taskappconlocalstorage-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIh32geliICEgHrNWbogb3D7clMI",
+    "object": "chat.completion",
+    "created": 1764912653,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a JavaScript snippet that appears to manage a simple task list with functionalities to add, display, and delete tasks. It uses local storage to persist data across sessions. Below is a breakdown of the key components and functionalities of the code:\n\n### Key Variables and Functions\n\n1. **`saveTask` Function:**\n   - Triggered on form submission to save a new task.\n   - Prevents the default form submission behavior.\n   - Retrieves the title and description from the form inputs.\n   - Checks if the title input is empty and logs a message if so.\n   - Creates a task object and adds it to the local storage.\n   - Resets the form and refreshes the task list display.\n\n2. **`getTask` Function:**\n   - Retrieves tasks from local storage and displays them in a specified HTML element.\n   - Each task is displayed inside a card with a delete button.\n   - The delete button has an `onClick` event to trigger the `deleteTask` function.\n\n3. **`deleteTask` Function:**\n   - Accepts a task title as an argument.\n   - Finds the task by title in the local storage array and removes it.\n   - Updates the local storage with the new array of tasks.\n   - Refreshes the task list display.\n\n4. **`inputEmpty` Function:**\n   - Logs a message indicating that the input field is empty.\n\n5. **Event Listener:**\n   - Added to the form to trigger the `saveTask` function on the 'submit' event.\n\n### Local Storage Keys and Data Handling\n\n- Uses the key `'tasks'` for storing the array of task objects in local storage.\n- Task objects are stored with properties `title` and `description`.\n\n### HTML Manipulation\n\n- Uses `querySelector` to interact with HTML elements (`#formTask`, `#title`, `#description`, `#tasks`).\n- Dynamically inserts HTML for tasks using `insertAdjacentHTML`.\n\n### Obfuscated Code and String Arrays\n\n- The code uses a string array and index-based access to obfuscate function names and strings, making it harder to read directly.\n- Functions like `a0_0x19ed8c` and `a0_0xae15` are used to map obfuscated strings to their actual values.\n\n### Summary\n\nThis script provides basic task management functionality with the ability to add, display, and delete tasks. It uses local storage for data persistence, ensuring that tasks are saved across browser sessions. The use",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2367,
+      "completion_tokens": 512,
+      "total_tokens": 2879,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a JavaScript snippet that appears to manage a simple task list with functionalities to add, display, and delete tasks. It uses local storage to persist data across sessions. Below is a breakdown of the key components and functionalities of the code:\n\n### Key Variables and Functions\n\n1. **`saveTask` Function:**\n   - Triggered on form submission to save a new task.\n   - Prevents the default form submission behavior.\n   - Retrieves the title and description from the form inputs.\n   - Checks if the title input is empty and logs a message if so.\n   - Creates a task object and adds it to the local storage.\n   - Resets the form and refreshes the task list display.\n\n2. **`getTask` Function:**\n   - Retrieves tasks from local storage and displays them in a specified HTML element.\n   - Each task is displayed inside a card with a delete button.\n   - The delete button has an `onClick` event to trigger the `deleteTask` function.\n\n3. **`deleteTask` Function:**\n   - Accepts a task title as an argument.\n   - Finds the task by title in the local storage array and removes it.\n   - Updates the local storage with the new array of tasks.\n   - Refreshes the task list display.\n\n4. **`inputEmpty` Function:**\n   - Logs a message indicating that the input field is empty.\n\n5. **Event Listener:**\n   - Added to the form to trigger the `saveTask` function on the 'submit' event.\n\n### Local Storage Keys and Data Handling\n\n- Uses the key `'tasks'` for storing the array of task objects in local storage.\n- Task objects are stored with properties `title` and `description`.\n\n### HTML Manipulation\n\n- Uses `querySelector` to interact with HTML elements (`#formTask`, `#title`, `#description`, `#tasks`).\n- Dynamically inserts HTML for tasks using `insertAdjacentHTML`.\n\n### Obfuscated Code and String Arrays\n\n- The code uses a string array and index-based access to obfuscate function names and strings, making it harder to read directly.\n- Functions like `a0_0x19ed8c` and `a0_0xae15` are used to map obfuscated strings to their actual values.\n\n### Summary\n\nThis script provides basic task management functionality with the ability to add, display, and delete tasks. It uses local storage for data persistence, ensuring that tasks are saved across browser sessions. The use"
+}

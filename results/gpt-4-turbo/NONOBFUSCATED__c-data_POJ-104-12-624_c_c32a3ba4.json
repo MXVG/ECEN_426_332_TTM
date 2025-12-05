@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-12-624_c_c32a3ba4",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-12-624.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjH8TUqBBPycCkLW04Qc5v4xSmiuz",
+    "object": "chat.completion",
+    "created": 1764906665,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code is designed to read sequences of integers and count specific pairs within each sequence. Here's a breakdown of what the code does:\n\n1. **Initialization**: The program declares an array `a[16]` to store up to 16 integers, and several integer variables (`i`, `j`, `k`, `h`, `n`) for loop control and counting.\n\n2. **Outer Infinite Loop**: The outer loop (`for (h=0;;h++)`) runs indefinitely until explicitly broken out of. This loop handles multiple sequences of numbers.\n\n3. **Input and Break Conditions**:\n   - The inner loop (`for(i=0;i<16;i++)`) reads integers into the array `a`. If a `0` is encountered, the loop breaks early.\n   - If the first element of the array `a[0]` is `-1`, the program breaks out of the outer loop and ends.\n\n4. **Counting Pairs**:\n   - After reading a sequence, another nested loop structure (`for (j=0;j<i;j++)` and `for (k=0;k<i;k++)`) checks each pair of numbers in the sequence.\n   - For each pair `(a[k], a[j])`, if `a[k]` is exactly twice `a[j]` (i.e., `a[k] / a[j] == 2` and `a[k] % a[j] == 0`), the counter `n` is incremented.\n\n5. **Output**: After processing each sequence, the count `n` is printed.\n\n6. **End of Data Handling**: If the first element after processing a sequence is `-1`, the program breaks out of the outer loop and ends.\n\n7. **Return**: The program returns `0`, indicating successful execution.\n\n### Key Points:\n- The program reads sequences of integers from standard input until a sequence starts with `-1`.\n- It counts how many times one number in the sequence is exactly twice another number.\n- The results for each sequence are printed immediately after processing that sequence.\n- The program handles up to 16 integers per sequence but stops reading more numbers if a `0` is encountered.\n- The program ends either when a sequence starts with `-1` or after processing a sequence that starts with `-1`.\n\n### Example Usage:\nIf the input is:\n```\n1 2 4 8 0\n3 6 12 24 0\n-1\n```\nThe output will be",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 176,
+      "completion_tokens": 512,
+      "total_tokens": 688,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code is designed to read sequences of integers and count specific pairs within each sequence. Here's a breakdown of what the code does:\n\n1. **Initialization**: The program declares an array `a[16]` to store up to 16 integers, and several integer variables (`i`, `j`, `k`, `h`, `n`) for loop control and counting.\n\n2. **Outer Infinite Loop**: The outer loop (`for (h=0;;h++)`) runs indefinitely until explicitly broken out of. This loop handles multiple sequences of numbers.\n\n3. **Input and Break Conditions**:\n   - The inner loop (`for(i=0;i<16;i++)`) reads integers into the array `a`. If a `0` is encountered, the loop breaks early.\n   - If the first element of the array `a[0]` is `-1`, the program breaks out of the outer loop and ends.\n\n4. **Counting Pairs**:\n   - After reading a sequence, another nested loop structure (`for (j=0;j<i;j++)` and `for (k=0;k<i;k++)`) checks each pair of numbers in the sequence.\n   - For each pair `(a[k], a[j])`, if `a[k]` is exactly twice `a[j]` (i.e., `a[k] / a[j] == 2` and `a[k] % a[j] == 0`), the counter `n` is incremented.\n\n5. **Output**: After processing each sequence, the count `n` is printed.\n\n6. **End of Data Handling**: If the first element after processing a sequence is `-1`, the program breaks out of the outer loop and ends.\n\n7. **Return**: The program returns `0`, indicating successful execution.\n\n### Key Points:\n- The program reads sequences of integers from standard input until a sequence starts with `-1`.\n- It counts how many times one number in the sequence is exactly twice another number.\n- The results for each sequence are printed immediately after processing that sequence.\n- The program handles up to 16 integers per sequence but stops reading more numbers if a `0` is encountered.\n- The program ends either when a sequence starts with `-1` or after processing a sequence that starts with `-1`.\n\n### Example Usage:\nIf the input is:\n```\n1 2 4 8 0\n3 6 12 24 0\n-1\n```\nThe output will be"
+}

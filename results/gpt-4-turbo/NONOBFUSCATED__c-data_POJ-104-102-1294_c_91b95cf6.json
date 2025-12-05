@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-102-1294_c_91b95cf6",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-102-1294.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjH7iB5nRSTCzHUqd3dOBNPt6vLf3",
+    "object": "chat.completion",
+    "created": 1764906618,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code reads a number of student records, each containing the student's sex and height. It then separates the heights into two arrays based on the sex of the students (one for boys and one for girls), sorts these arrays, and finally prints the sorted heights. The heights of boys are printed in ascending order, while the heights of girls are printed in descending order.\n\nHere's a breakdown of the code:\n\n1. **Structure Definition**:\n   - `struct student` is defined with two fields: `height` (a `float`) and `sex` (a character array of size 7).\n\n2. **Main Function**:\n   - Variables are declared for storing the number of students (`n`), indices for girls (`q`) and boys (`j`), and arrays for storing the heights of girls (`girl[40]`) and boys (`boy[40]`).\n   - The number of students (`n`) is read from the user.\n   - A loop collects each student's sex and height.\n   - Another loop categorizes the heights into `girl` or `boy` arrays based on the sex specified.\n   - The `qsort` function is used to sort the `boy` and `girl` arrays. The comparison function `compInc` is used for sorting, which sorts integers in ascending order.\n   - The sorted heights are printed. Boys' heights are printed in ascending order directly. Girls' heights are printed in descending order by iterating from the end of the array to the beginning.\n\n3. **Comparison Function (`compInc`)**:\n   - This function takes two generic pointers (`const void *a` and `const void *b`), casts them to `int*`, dereferences them, and returns the difference. This is used by `qsort` to determine the order of elements (ascending in this case).\n\n4. **Output**:\n   - The program first prints the sorted heights of boys followed by the sorted heights of girls in reverse order. Each height is formatted to two decimal places.\n\n**Example Usage**:\nIf the user inputs:\n```\n3\nm 170.5\nf 160.2\nm 180.1\n```\nThe output will be:\n```\n170.50 180.10 160.20\n```\nThis output shows the heights of boys sorted in ascending order followed by the heights of girls in descending order.\n\n**Note**: The code lacks error checking for inputs and assumes that the input data will always be correctly",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 253,
+      "completion_tokens": 512,
+      "total_tokens": 765,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code reads a number of student records, each containing the student's sex and height. It then separates the heights into two arrays based on the sex of the students (one for boys and one for girls), sorts these arrays, and finally prints the sorted heights. The heights of boys are printed in ascending order, while the heights of girls are printed in descending order.\n\nHere's a breakdown of the code:\n\n1. **Structure Definition**:\n   - `struct student` is defined with two fields: `height` (a `float`) and `sex` (a character array of size 7).\n\n2. **Main Function**:\n   - Variables are declared for storing the number of students (`n`), indices for girls (`q`) and boys (`j`), and arrays for storing the heights of girls (`girl[40]`) and boys (`boy[40]`).\n   - The number of students (`n`) is read from the user.\n   - A loop collects each student's sex and height.\n   - Another loop categorizes the heights into `girl` or `boy` arrays based on the sex specified.\n   - The `qsort` function is used to sort the `boy` and `girl` arrays. The comparison function `compInc` is used for sorting, which sorts integers in ascending order.\n   - The sorted heights are printed. Boys' heights are printed in ascending order directly. Girls' heights are printed in descending order by iterating from the end of the array to the beginning.\n\n3. **Comparison Function (`compInc`)**:\n   - This function takes two generic pointers (`const void *a` and `const void *b`), casts them to `int*`, dereferences them, and returns the difference. This is used by `qsort` to determine the order of elements (ascending in this case).\n\n4. **Output**:\n   - The program first prints the sorted heights of boys followed by the sorted heights of girls in reverse order. Each height is formatted to two decimal places.\n\n**Example Usage**:\nIf the user inputs:\n```\n3\nm 170.5\nf 160.2\nm 180.1\n```\nThe output will be:\n```\n170.50 180.10 160.20\n```\nThis output shows the heights of boys sorted in ascending order followed by the heights of girls in descending order.\n\n**Note**: The code lacks error checking for inputs and assumes that the input data will always be correctly"
+}

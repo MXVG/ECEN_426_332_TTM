@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/wobfuscator_jsapps-eventdelegation-app_javascript_31250eae",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/wobfuscator/jsapps-eventdelegation-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIz4OW4Zo4zGF554gbcVWDptQ3K3",
+    "object": "chat.completion",
+    "created": 1764913770,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided JavaScript code is a complex example that integrates WebAssembly (Wasm) with JavaScript to handle UI interactions in a web page. The code includes functions for decoding base64 strings, loading and instantiating WebAssembly modules, and handling button clicks to change the background color of an element based on the button clicked. Here's a breakdown of the key components and functionalities:\n\n1. **Base64 Decoding and WebAssembly Module Loading**:\n   - `__universalAtob`: A function that decodes a base64-encoded string into a `Uint8Array`. It uses `atob` for decoding in environments where it's available (like browsers), and falls back to `Buffer.from` for Node.js environments.\n   - `__callWasmBuffer` and `__callWasmModule`: These are used to load a specific WebAssembly module. The base64 string is decoded and converted into a format that can be used to create a WebAssembly module.\n\n2. **WebAssembly Instances for String Handling**:\n   - `__wasmStringModules`: An array of WebAssembly instances created from base64-encoded strings. These modules appear to be used for retrieving string data, likely used for element selectors or class names.\n\n3. **Dynamic Content and Event Handling**:\n   - `lS`: A function that retrieves strings from the WebAssembly modules, which are likely used as selectors or parameters in the DOM manipulation functions.\n   - `btnBotones`, `botones`, and `fondo`: Variables that store DOM elements selected using strings retrieved from the WebAssembly modules.\n   - Event listeners are added to these elements to handle clicks and other interactions.\n\n4. **Button Interaction Logic**:\n   - `agregarBotones`: A function that dynamically adds buttons to the `botones` element when an event is triggered (like a click on `btnBotones`).\n   - `delegacion`: A function that handles clicks on the dynamically added buttons. It checks the class of the clicked button and changes the class of the `fondo` element to update its background color.\n\n5. **Nested WebAssembly Calls**:\n   - The code contains nested WebAssembly instance creations where each instance might be performing specific tasks like preventing default actions or logging to the console.\n\n6. **Switch Statement for UI Changes**:\n   - The `delegacion` function uses a switch statement to change the class of the `fondo` element based on the class of the button that was clicked, effectively changing the background color of the",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1804,
+      "completion_tokens": 512,
+      "total_tokens": 2316,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided JavaScript code is a complex example that integrates WebAssembly (Wasm) with JavaScript to handle UI interactions in a web page. The code includes functions for decoding base64 strings, loading and instantiating WebAssembly modules, and handling button clicks to change the background color of an element based on the button clicked. Here's a breakdown of the key components and functionalities:\n\n1. **Base64 Decoding and WebAssembly Module Loading**:\n   - `__universalAtob`: A function that decodes a base64-encoded string into a `Uint8Array`. It uses `atob` for decoding in environments where it's available (like browsers), and falls back to `Buffer.from` for Node.js environments.\n   - `__callWasmBuffer` and `__callWasmModule`: These are used to load a specific WebAssembly module. The base64 string is decoded and converted into a format that can be used to create a WebAssembly module.\n\n2. **WebAssembly Instances for String Handling**:\n   - `__wasmStringModules`: An array of WebAssembly instances created from base64-encoded strings. These modules appear to be used for retrieving string data, likely used for element selectors or class names.\n\n3. **Dynamic Content and Event Handling**:\n   - `lS`: A function that retrieves strings from the WebAssembly modules, which are likely used as selectors or parameters in the DOM manipulation functions.\n   - `btnBotones`, `botones`, and `fondo`: Variables that store DOM elements selected using strings retrieved from the WebAssembly modules.\n   - Event listeners are added to these elements to handle clicks and other interactions.\n\n4. **Button Interaction Logic**:\n   - `agregarBotones`: A function that dynamically adds buttons to the `botones` element when an event is triggered (like a click on `btnBotones`).\n   - `delegacion`: A function that handles clicks on the dynamically added buttons. It checks the class of the clicked button and changes the class of the `fondo` element to update its background color.\n\n5. **Nested WebAssembly Calls**:\n   - The code contains nested WebAssembly instance creations where each instance might be performing specific tasks like preventing default actions or logging to the console.\n\n6. **Switch Statement for UI Changes**:\n   - The `delegacion` function uses a switch statement to change the class of the `fondo` element based on the class of the button that was clicked, effectively changing the background color of the"
+}

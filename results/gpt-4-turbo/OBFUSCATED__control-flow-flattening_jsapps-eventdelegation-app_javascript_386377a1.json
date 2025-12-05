@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-eventdelegation-app_javascript_386377a1",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-eventdelegation-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIf9zj3eenaV4ebeugXkgVuWqTZ4",
+    "object": "chat.completion",
+    "created": 1764912535,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided JavaScript code snippet is a complex and obfuscated piece of code that involves dynamically adding buttons to a webpage and handling click events to change the background color of a designated area based on the button clicked. The code uses a combination of immediately-invoked function expressions (IIFE), event listeners, and switch-case statements. Here's a breakdown of the key components and functionalities:\n\n### Key Variables and Elements\n- `btnBotones`: A button that, when clicked, triggers the addition of a set of buttons to the `botones` element.\n- `botones`: The container where new buttons are added dynamically.\n- `fondo`: The element whose background color changes based on the button clicked in the `botones` container.\n\n### Functions\n1. **`agregarBotones`**: This function is triggered when `btnBotones` is clicked. It prevents the default action of the event (likely a form submission) and sets the `innerHTML` of the `botones` element to include multiple buttons (primary, secondary, danger, success, warning).\n\n2. **`delegacion`**: This function handles click events on the dynamically added buttons within the `botones` container. It uses event delegation to determine which button was clicked and changes the `className` of the `fondo` element to update its background color accordingly.\n\n### Event Listeners\n- An event listener is added to `btnBotones` to trigger `agregarBotones` on click.\n- Another event listener is added to `botones` for handling click events on the dynamically added buttons, triggering the `delegacion` function.\n\n### Switch-Case Logic in `delegacion`\nThe `delegacion` function uses a switch-case statement to check the class of the button that was clicked and changes the `className` of the `fondo` element based on the button:\n- **Primary Button**: Sets class to `bg-primary`.\n- **Secondary Button**: Sets class to `bg-secondary`.\n- **Danger Button**: Sets class to `bg-danger`.\n- **Success Button**: Sets class to `bg-success`.\n- **Warning Button**: Sets class to `bg-warning`.\n\n### Obfuscation and Encoding\nThe code uses hexadecimal and other encoding techniques to obfuscate variable names and string values, making it harder to read and understand at first glance. Functions like `a0_0x3fb7` and `a0_0x3bbe` are part of this obfuscation, handling the mapping of",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1360,
+      "completion_tokens": 512,
+      "total_tokens": 1872,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided JavaScript code snippet is a complex and obfuscated piece of code that involves dynamically adding buttons to a webpage and handling click events to change the background color of a designated area based on the button clicked. The code uses a combination of immediately-invoked function expressions (IIFE), event listeners, and switch-case statements. Here's a breakdown of the key components and functionalities:\n\n### Key Variables and Elements\n- `btnBotones`: A button that, when clicked, triggers the addition of a set of buttons to the `botones` element.\n- `botones`: The container where new buttons are added dynamically.\n- `fondo`: The element whose background color changes based on the button clicked in the `botones` container.\n\n### Functions\n1. **`agregarBotones`**: This function is triggered when `btnBotones` is clicked. It prevents the default action of the event (likely a form submission) and sets the `innerHTML` of the `botones` element to include multiple buttons (primary, secondary, danger, success, warning).\n\n2. **`delegacion`**: This function handles click events on the dynamically added buttons within the `botones` container. It uses event delegation to determine which button was clicked and changes the `className` of the `fondo` element to update its background color accordingly.\n\n### Event Listeners\n- An event listener is added to `btnBotones` to trigger `agregarBotones` on click.\n- Another event listener is added to `botones` for handling click events on the dynamically added buttons, triggering the `delegacion` function.\n\n### Switch-Case Logic in `delegacion`\nThe `delegacion` function uses a switch-case statement to check the class of the button that was clicked and changes the `className` of the `fondo` element based on the button:\n- **Primary Button**: Sets class to `bg-primary`.\n- **Secondary Button**: Sets class to `bg-secondary`.\n- **Danger Button**: Sets class to `bg-danger`.\n- **Success Button**: Sets class to `bg-success`.\n- **Warning Button**: Sets class to `bg-warning`.\n\n### Obfuscation and Encoding\nThe code uses hexadecimal and other encoding techniques to obfuscate variable names and string values, making it harder to read and understand at first glance. Functions like `a0_0x3fb7` and `a0_0x3bbe` are part of this obfuscation, handling the mapping of"
+}

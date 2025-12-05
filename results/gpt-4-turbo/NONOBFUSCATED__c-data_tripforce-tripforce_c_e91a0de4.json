@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_tripforce-tripforce_c_e91a0de4",
+  "source_path": "data/raw/nonobfuscated/c-data/tripforce-tripforce.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHXM2PqcGCHAruxyJ1obKG1oq6dv",
+    "object": "chat.completion",
+    "created": 1764908208,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code is a multi-threaded tripcode generator and bruteforcer for Futaba-style imageboards. It uses OpenMP for parallel processing and OpenSSL for DES encryption. The program can operate in different modes: generating random tripcodes, searching for tripcodes that match a specific pattern (case-sensitive or case-insensitive).\n\nHere's a breakdown of the key components and functionalities of the code:\n\n1. **Preprocessor Directives and Includes**:\n   - Conditional compilation for OpenMP and platform-specific headers.\n   - Includes necessary libraries for functionality (e.g., `stdio.h`, `stdlib.h`, `string.h`, `limits.h`, `time.h`, `signal.h`, `openssl/des.h`).\n\n2. **Constants and Enums**:\n   - Defines constants for application metadata and error messages.\n   - Enumerations for program modes (`pmode_t`) and average statistics calculation.\n\n3. **Global Variables**:\n   - `run_state` to control the running state of the program, especially for handling signals like SIGINT for graceful shutdown.\n\n4. **Utility Functions**:\n   - `cli_splash()`, `cli_help_msg()` for CLI interface.\n   - `validate_query()` to ensure the search string meets tripcode requirements.\n   - Random number generation functions (`seed_qrand()`, `qrand()`, `seed_qrand_r()`, `qrand_r()`).\n   - `trip_frequency()` to calculate and fetch tripcode generation rates.\n   - `trip_rate_condense()` to format tripcode generation rates with appropriate units.\n\n5. **Tripcode Generation Functions**:\n   - `generate_password()` and `generate_salt()` to create the password and salt used in DES encryption.\n   - `strip_outliers()` and `replace_punctuation()` to sanitize the salt.\n   - `truncate_tripcode()` to extract the tripcode from the DES hash.\n   - `strcasestr()` for case-insensitive string search.\n\n6. **Core Functionality**:\n   - `determine_match()` to check if the generated tripcode matches the query and print if it does.\n   - `sigint_stop()` to handle SIGINT signal for stopping the program.\n\n7. **Main Function**:\n   - Handles command-line arguments to set the mode of operation.\n   - Initializes and manages threads using OpenMP.\n   - Each thread generates tripcodes in a loop until the program is stopped.\n   - Handles memory allocation and deallocation for thread-specific data.\n\n8. **Compilation and Execution",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3122,
+      "completion_tokens": 512,
+      "total_tokens": 3634,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code is a multi-threaded tripcode generator and bruteforcer for Futaba-style imageboards. It uses OpenMP for parallel processing and OpenSSL for DES encryption. The program can operate in different modes: generating random tripcodes, searching for tripcodes that match a specific pattern (case-sensitive or case-insensitive).\n\nHere's a breakdown of the key components and functionalities of the code:\n\n1. **Preprocessor Directives and Includes**:\n   - Conditional compilation for OpenMP and platform-specific headers.\n   - Includes necessary libraries for functionality (e.g., `stdio.h`, `stdlib.h`, `string.h`, `limits.h`, `time.h`, `signal.h`, `openssl/des.h`).\n\n2. **Constants and Enums**:\n   - Defines constants for application metadata and error messages.\n   - Enumerations for program modes (`pmode_t`) and average statistics calculation.\n\n3. **Global Variables**:\n   - `run_state` to control the running state of the program, especially for handling signals like SIGINT for graceful shutdown.\n\n4. **Utility Functions**:\n   - `cli_splash()`, `cli_help_msg()` for CLI interface.\n   - `validate_query()` to ensure the search string meets tripcode requirements.\n   - Random number generation functions (`seed_qrand()`, `qrand()`, `seed_qrand_r()`, `qrand_r()`).\n   - `trip_frequency()` to calculate and fetch tripcode generation rates.\n   - `trip_rate_condense()` to format tripcode generation rates with appropriate units.\n\n5. **Tripcode Generation Functions**:\n   - `generate_password()` and `generate_salt()` to create the password and salt used in DES encryption.\n   - `strip_outliers()` and `replace_punctuation()` to sanitize the salt.\n   - `truncate_tripcode()` to extract the tripcode from the DES hash.\n   - `strcasestr()` for case-insensitive string search.\n\n6. **Core Functionality**:\n   - `determine_match()` to check if the generated tripcode matches the query and print if it does.\n   - `sigint_stop()` to handle SIGINT signal for stopping the program.\n\n7. **Main Function**:\n   - Handles command-line arguments to set the mode of operation.\n   - Initializes and manages threads using OpenMP.\n   - Each thread generates tripcodes in a loop until the program is stopped.\n   - Handles memory allocation and deallocation for thread-specific data.\n\n8. **Compilation and Execution"
+}

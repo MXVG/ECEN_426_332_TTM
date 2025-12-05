@@ -8,6 +8,7 @@ class ModelClient(ABC):
     """Common interface for model backends."""
 
     def __init__(self, name: str, **client_settings: Any) -> None:
+        """Store metadata for the client implementation."""
         self.name = name
         self._settings = client_settings
 

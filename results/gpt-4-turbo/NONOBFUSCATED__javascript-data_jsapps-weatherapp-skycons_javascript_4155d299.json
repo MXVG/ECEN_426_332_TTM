@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-weatherapp-skycons_javascript_4155d299",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-weatherapp-skycons.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHcQAuClVPUe5H3v7eh7L7waH5C4",
+    "object": "chat.completion",
+    "created": 1764908522,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "This JavaScript code defines a library called `Skycons` used for creating animated weather icons using HTML5 canvas. The code is structured to be self-contained and modular, making it easy to integrate into web projects. Here's a breakdown of the key components and functionalities:\n\n### Core Functionality\n1. **Animation Frame Management**: The code uses `requestAnimationFrame` for smooth animations if available, falling back to `setInterval` if not. This is handled in the initial self-executing function that sets up `requestInterval` and `cancelInterval`.\n\n2. **Weather Icon Drawing Functions**: Each weather condition (like clear day, cloudy, rain, etc.) has a corresponding function that draws the icon. These functions use canvas operations to draw shapes and paths that represent different weather states.\n\n3. **Skycons Constructor and Prototype**: The `Skycons` function acts as a constructor to create an instance of the weather icon system. It manages a list of canvas elements to animate, handles the drawing interval, and provides methods to add, remove, or change icons.\n\n### Detailed Components\n- **Utility Functions**: Functions like `circle`, `line`, `puff`, etc., are utility functions to draw basic shapes on the canvas.\n- **Weather Functions**: Functions like `sun`, `moon`, `cloud`, `rain`, etc., are specific to drawing different weather conditions. They use the utility functions for creating the required graphics.\n- **Animation Management**: The `play` and `pause` methods on the `Skycons` prototype manage the animation loop, starting and stopping it as needed.\n\n### Animation and Weather Patterns\n- **Wind Paths and Leaf Animation**: The code includes detailed path arrays and functions to animate elements like wind and leaves, adding a dynamic visual effect to the icons.\n- **Time-Based Animation**: Many drawing functions take a time parameter to create animations that evolve over time, making the icons lively.\n\n### Usage\nTo use Skycons, you would:\n1. Create a new instance of `Skycons`.\n2. Use the `add` method to attach it to a canvas element and specify the weather condition.\n3. Control the animation with `play` and `pause`.\n\n### Example\n```javascript\nvar icons = new Skycons({\"color\": \"pink\"});\nicons.add(\"icon1\", \"clear-day\");\nicons.play();\n```\n\nThis code snippet initializes Skycons with a specific color, adds a 'clear-day' icon to a canvas element with id `icon1`, and starts the animation.\n\n### Conclusion\nThis library",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 6054,
+      "completion_tokens": 512,
+      "total_tokens": 6566,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "This JavaScript code defines a library called `Skycons` used for creating animated weather icons using HTML5 canvas. The code is structured to be self-contained and modular, making it easy to integrate into web projects. Here's a breakdown of the key components and functionalities:\n\n### Core Functionality\n1. **Animation Frame Management**: The code uses `requestAnimationFrame` for smooth animations if available, falling back to `setInterval` if not. This is handled in the initial self-executing function that sets up `requestInterval` and `cancelInterval`.\n\n2. **Weather Icon Drawing Functions**: Each weather condition (like clear day, cloudy, rain, etc.) has a corresponding function that draws the icon. These functions use canvas operations to draw shapes and paths that represent different weather states.\n\n3. **Skycons Constructor and Prototype**: The `Skycons` function acts as a constructor to create an instance of the weather icon system. It manages a list of canvas elements to animate, handles the drawing interval, and provides methods to add, remove, or change icons.\n\n### Detailed Components\n- **Utility Functions**: Functions like `circle`, `line`, `puff`, etc., are utility functions to draw basic shapes on the canvas.\n- **Weather Functions**: Functions like `sun`, `moon`, `cloud`, `rain`, etc., are specific to drawing different weather conditions. They use the utility functions for creating the required graphics.\n- **Animation Management**: The `play` and `pause` methods on the `Skycons` prototype manage the animation loop, starting and stopping it as needed.\n\n### Animation and Weather Patterns\n- **Wind Paths and Leaf Animation**: The code includes detailed path arrays and functions to animate elements like wind and leaves, adding a dynamic visual effect to the icons.\n- **Time-Based Animation**: Many drawing functions take a time parameter to create animations that evolve over time, making the icons lively.\n\n### Usage\nTo use Skycons, you would:\n1. Create a new instance of `Skycons`.\n2. Use the `add` method to attach it to a canvas element and specify the weather condition.\n3. Control the animation with `play` and `pause`.\n\n### Example\n```javascript\nvar icons = new Skycons({\"color\": \"pink\"});\nicons.add(\"icon1\", \"clear-day\");\nicons.play();\n```\n\nThis code snippet initializes Skycons with a specific color, adds a 'clear-day' icon to a canvas element with id `icon1`, and starts the animation.\n\n### Conclusion\nThis library"
+}

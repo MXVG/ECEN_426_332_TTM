@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/split-string_jsapps-searchapp-modules-searchresults_javascript_8e105086",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/split-string/jsapps-searchapp-modules-searchresults.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIvDRZgT3AeLwK3QGuhL9Bla6xdc",
+    "object": "chat.completion",
+    "created": 1764913531,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a minified JavaScript snippet that appears to be part of a web application dealing with search results. The code includes several functions related to manipulating the DOM (Document Object Model) to display search results, images, and text associated with those results. It also handles clearing and setting statistical information about the search. Below, I'll explain the functionality of each part of the code:\n\n1. **Obfuscated Function Wrapper**: The initial function is an immediately invoked function expression (IIFE) that seems to be used for obfuscation and possibly to protect the scope of variables.\n\n2. **Mapping Function `a0_0x4aa9` and `a0_0x40a5`**: These functions are used to map obfuscated strings to their original meaning. This is a common technique in obfuscated code to make it harder to understand the logic by just reading it.\n\n3. **`deleteSearchResults` Function**:\n   - This function clears the search results from the DOM. It selects a container element (likely with the ID `search-results`) and removes all its child elements, effectively clearing previous search results.\n\n4. **`buildSearchResults` Function**:\n   - This function takes search results data and dynamically builds HTML elements to display these results. It logs the results, iterates over them, and for each result, it creates a container with the result's image (if available) and text. These elements are then appended to the main results container in the DOM.\n\n5. **`createResultItem`, `createResultImage`, and `createResultText` Functions**:\n   - These functions are helper functions used by `buildSearchResults` to create individual components of a search result item, such as the main container, image, and text elements.\n\n6. **`clearStatsLine` and `setStatsLine` Functions**:\n   - These functions manipulate a DOM element intended to display statistical information about the search results (like the number of results). `clearStatsLine` clears this information, while `setStatsLine` sets this information based on whether any results are present.\n\n7. **Export Statements**:\n   - The functions are exported, which means they are intended to be used elsewhere in the application, likely in other scripts that handle user interactions, trigger searches, and display results.\n\nOverall, the code is structured to handle the presentation layer of search results in a web application, providing a dynamic way to display and clear results and related statistics. The use of obfuscation and min",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2283,
+      "completion_tokens": 512,
+      "total_tokens": 2795,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a minified JavaScript snippet that appears to be part of a web application dealing with search results. The code includes several functions related to manipulating the DOM (Document Object Model) to display search results, images, and text associated with those results. It also handles clearing and setting statistical information about the search. Below, I'll explain the functionality of each part of the code:\n\n1. **Obfuscated Function Wrapper**: The initial function is an immediately invoked function expression (IIFE) that seems to be used for obfuscation and possibly to protect the scope of variables.\n\n2. **Mapping Function `a0_0x4aa9` and `a0_0x40a5`**: These functions are used to map obfuscated strings to their original meaning. This is a common technique in obfuscated code to make it harder to understand the logic by just reading it.\n\n3. **`deleteSearchResults` Function**:\n   - This function clears the search results from the DOM. It selects a container element (likely with the ID `search-results`) and removes all its child elements, effectively clearing previous search results.\n\n4. **`buildSearchResults` Function**:\n   - This function takes search results data and dynamically builds HTML elements to display these results. It logs the results, iterates over them, and for each result, it creates a container with the result's image (if available) and text. These elements are then appended to the main results container in the DOM.\n\n5. **`createResultItem`, `createResultImage`, and `createResultText` Functions**:\n   - These functions are helper functions used by `buildSearchResults` to create individual components of a search result item, such as the main container, image, and text elements.\n\n6. **`clearStatsLine` and `setStatsLine` Functions**:\n   - These functions manipulate a DOM element intended to display statistical information about the search results (like the number of results). `clearStatsLine` clears this information, while `setStatsLine` sets this information based on whether any results are present.\n\n7. **Export Statements**:\n   - The functions are exported, which means they are intended to be used elsewhere in the application, likely in other scripts that handle user interactions, trigger searches, and display results.\n\nOverall, the code is structured to handle the presentation layer of search results in a web application, providing a dynamic way to display and clear results and related statistics. The use of obfuscation and min"
+}

@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-searchapp-modules-datafunctions_javascript_585eddd8",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-searchapp-modules-datafunctions.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIgENDCK3twGVuW32LLgzk5LR3Ar",
+    "object": "chat.completion",
+    "created": 1764912602,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided appears to be obfuscated JavaScript, typically used to make the source code difficult to understand or reverse-engineer. However, I can help explain the general functionality and structure of this code.\n\n### Overview\n\nThe code defines several functions related to fetching and processing search results from Wikipedia's API. It includes mechanisms for:\n1. Retrieving a search term from a webpage.\n2. Constructing a URL to query Wikipedia's API based on the search term.\n3. Fetching data from the API.\n4. Processing the fetched data to extract relevant information.\n\n### Detailed Breakdown\n\n1. **`getSearchTerm` Function:**\n   - This function retrieves the value of an input element (assumed to be for search) from the DOM, trims it, and replaces multiple spaces with a single space.\n\n2. **`retrieveSearchResults` Function:**\n   - This asynchronous function takes a search term, constructs a query URL using `getwikiSearchString`, fetches data from Wikipedia's API using `requestData`, and processes the results using `processWikiResults`.\n\n3. **`getwikiSearchString` Function:**\n   - Constructs a URL for querying Wikipedia's API. It includes parameters for the search action, the search term, and additional parameters to control the output (like limiting the number of characters in the response).\n\n4. **`getMaxChars` Function:**\n   - Determines the maximum number of characters for the extracts based on the window or document width. This seems to be a way to adapt the amount of data fetched based on the client's display capabilities.\n\n5. **`requestData` Function:**\n   - An asynchronous function that performs a fetch request to the provided URL and returns the JSON response.\n\n6. **`processWikiResults` Function:**\n   - Processes the JSON data returned from Wikipedia's API. It extracts and structures the data (like page ID, title, thumbnail image, and text extract) into a more manageable format.\n\n### Additional Notes\n\n- The code uses several obfuscation techniques, such as hexadecimal function names and parameter names, which makes it hard to read directly.\n- The use of immediately invoked function expressions (IIFE) and mappings between strings and function calls further complicates direct understanding without a deobfuscation process.\n- The code is modular, with clear separations for different functionalities (fetching data, processing data, etc.), which is good practice in software development.\n\n### Conclusion\n\nThe provided code is a complex, obfuscated script for interacting with",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1978,
+      "completion_tokens": 512,
+      "total_tokens": 2490,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided appears to be obfuscated JavaScript, typically used to make the source code difficult to understand or reverse-engineer. However, I can help explain the general functionality and structure of this code.\n\n### Overview\n\nThe code defines several functions related to fetching and processing search results from Wikipedia's API. It includes mechanisms for:\n1. Retrieving a search term from a webpage.\n2. Constructing a URL to query Wikipedia's API based on the search term.\n3. Fetching data from the API.\n4. Processing the fetched data to extract relevant information.\n\n### Detailed Breakdown\n\n1. **`getSearchTerm` Function:**\n   - This function retrieves the value of an input element (assumed to be for search) from the DOM, trims it, and replaces multiple spaces with a single space.\n\n2. **`retrieveSearchResults` Function:**\n   - This asynchronous function takes a search term, constructs a query URL using `getwikiSearchString`, fetches data from Wikipedia's API using `requestData`, and processes the results using `processWikiResults`.\n\n3. **`getwikiSearchString` Function:**\n   - Constructs a URL for querying Wikipedia's API. It includes parameters for the search action, the search term, and additional parameters to control the output (like limiting the number of characters in the response).\n\n4. **`getMaxChars` Function:**\n   - Determines the maximum number of characters for the extracts based on the window or document width. This seems to be a way to adapt the amount of data fetched based on the client's display capabilities.\n\n5. **`requestData` Function:**\n   - An asynchronous function that performs a fetch request to the provided URL and returns the JSON response.\n\n6. **`processWikiResults` Function:**\n   - Processes the JSON data returned from Wikipedia's API. It extracts and structures the data (like page ID, title, thumbnail image, and text extract) into a more manageable format.\n\n### Additional Notes\n\n- The code uses several obfuscation techniques, such as hexadecimal function names and parameter names, which makes it hard to read directly.\n- The use of immediately invoked function expressions (IIFE) and mappings between strings and function calls further complicates direct understanding without a deobfuscation process.\n- The code is modular, with clear separations for different functionalities (fetching data, processing data, etc.), which is good practice in software development.\n\n### Conclusion\n\nThe provided code is a complex, obfuscated script for interacting with"
+}

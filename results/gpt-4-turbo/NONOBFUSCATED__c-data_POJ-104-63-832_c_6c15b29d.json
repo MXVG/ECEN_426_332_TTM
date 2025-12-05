@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-63-832_c_6c15b29d",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-63-832.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHJ5R0I82SoWypSmWRaZBfbKD0fU",
+    "object": "chat.completion",
+    "created": 1764907323,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a C++ program that performs matrix multiplication. The program reads two matrices from the standard input, multiplies them if they are compatible for multiplication, and then outputs the resulting matrix. Below is a breakdown of the code with explanations and translations of the comments from Chinese to English:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{                                             \n    int x1, y1, x2, y2, i, j, k;\n    int a[100][100], b[100][100], c[100][100]; // Declare three 100x100 matrices\n\n    cin >> x1 >> y1; // Read dimensions of the first matrix\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y1; j++)\n            cin >> a[i][j]; // Read the first matrix\n\n    cin >> x2 >> y2; // Read dimensions of the second matrix\n    for (i = 0; i < x2; i++)\n        for (j = 0; j < y2; j++)\n            cin >> b[i][j]; // Read the second matrix\n\n    // Matrix multiplication is only possible if the number of columns in the first matrix (y1)\n    // is equal to the number of rows in the second matrix (x2)\n    if (y1 != x2) {\n        cout << \"Incompatible dimensions for matrix multiplication\" << endl;\n        return 1; // Return with error code\n    }\n\n    // Initialize the result matrix c to zero\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y2; j++)\n            c[i][j] = 0;\n\n    // Perform matrix multiplication\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y2; j++)\n            for (k = 0; k < x2; k++)\n                c[i][j] += a[i][k] * b[k][j]; // Sum of products\n\n    // Output the result matrix\n    for (i = 0; i < x1; i++) {\n        for (j = 0; j < y2 - 1; j++)\n            cout << c[i][j] << \" \";\n        cout << c[i][y2 - 1] << endl;",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 260,
+      "completion_tokens": 512,
+      "total_tokens": 772,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a C++ program that performs matrix multiplication. The program reads two matrices from the standard input, multiplies them if they are compatible for multiplication, and then outputs the resulting matrix. Below is a breakdown of the code with explanations and translations of the comments from Chinese to English:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{                                             \n    int x1, y1, x2, y2, i, j, k;\n    int a[100][100], b[100][100], c[100][100]; // Declare three 100x100 matrices\n\n    cin >> x1 >> y1; // Read dimensions of the first matrix\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y1; j++)\n            cin >> a[i][j]; // Read the first matrix\n\n    cin >> x2 >> y2; // Read dimensions of the second matrix\n    for (i = 0; i < x2; i++)\n        for (j = 0; j < y2; j++)\n            cin >> b[i][j]; // Read the second matrix\n\n    // Matrix multiplication is only possible if the number of columns in the first matrix (y1)\n    // is equal to the number of rows in the second matrix (x2)\n    if (y1 != x2) {\n        cout << \"Incompatible dimensions for matrix multiplication\" << endl;\n        return 1; // Return with error code\n    }\n\n    // Initialize the result matrix c to zero\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y2; j++)\n            c[i][j] = 0;\n\n    // Perform matrix multiplication\n    for (i = 0; i < x1; i++)\n        for (j = 0; j < y2; j++)\n            for (k = 0; k < x2; k++)\n                c[i][j] += a[i][k] * b[k][j]; // Sum of products\n\n    // Output the result matrix\n    for (i = 0; i < x1; i++) {\n        for (j = 0; j < y2 - 1; j++)\n            cout << c[i][j] << \" \";\n        cout << c[i][y2 - 1] << endl;"
+}

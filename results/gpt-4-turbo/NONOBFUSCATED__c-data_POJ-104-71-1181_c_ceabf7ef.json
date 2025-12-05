@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-71-1181_c_ceabf7ef",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-71-1181.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHKqqXtTsryxN6nUQQKHRGnYMCC2",
+    "object": "chat.completion",
+    "created": 1764907432,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code reads an integer `n` from the user, which represents the number of test cases. For each test case, the program reads three integers: `a[i]`, `b[i]`, and `c[i]`. Here, `a[i]` represents a year, and `b[i]` and `c[i]` represent two months within that year. The program then checks if the months are in ascending order, swapping them if necessary.\n\nThe main functionality of the code is to determine if the total number of days between the two months (exclusive of the ending month) is divisible by 7. If it is, the program prints \"YES\", otherwise it prints \"NO\".\n\nHere's a breakdown of the code:\n\n1. **Input Reading**: The program starts by reading the integer `n` which denotes the number of test cases. For each test case, it reads three integers `a[i]`, `b[i]`, and `c[i]`.\n\n2. **Month Order Correction**: If `b[i]` is greater than `c[i]`, their values are swapped to ensure that `b[i]` is the smaller month.\n\n3. **Leap Year Check**: The program checks if the year `a[i]` is a leap year using the conditions:\n   - A year is a leap year if it is divisible by 4 but not by 100, or if it is divisible by 400.\n\n4. **Day Calculation**:\n   - For each month between `b[i]` and `c[i]` (exclusive of `c[i]`), the program adds the number of days in that month to `sum`.\n   - For leap years, February has 29 days, otherwise, it has 28 days.\n   - The days in other months are added based on typical days in each month (31 for months like January, March, etc., and 30 for months like April, June, etc.).\n\n5. **Output**: After calculating the total days for the months between `b[i]` and `c[i]`, the program checks if this total is divisible by 7. If it is, it prints \"YES\", otherwise \"NO\".\n\n**Potential Issues and Improvements**:\n- The code assumes that the input months `b[i]` and `c[i]` are within the same year and does not handle cases where the months might span multiple years.\n- The code could be optimized by precomputing the days in each month for",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 427,
+      "completion_tokens": 512,
+      "total_tokens": 939,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code reads an integer `n` from the user, which represents the number of test cases. For each test case, the program reads three integers: `a[i]`, `b[i]`, and `c[i]`. Here, `a[i]` represents a year, and `b[i]` and `c[i]` represent two months within that year. The program then checks if the months are in ascending order, swapping them if necessary.\n\nThe main functionality of the code is to determine if the total number of days between the two months (exclusive of the ending month) is divisible by 7. If it is, the program prints \"YES\", otherwise it prints \"NO\".\n\nHere's a breakdown of the code:\n\n1. **Input Reading**: The program starts by reading the integer `n` which denotes the number of test cases. For each test case, it reads three integers `a[i]`, `b[i]`, and `c[i]`.\n\n2. **Month Order Correction**: If `b[i]` is greater than `c[i]`, their values are swapped to ensure that `b[i]` is the smaller month.\n\n3. **Leap Year Check**: The program checks if the year `a[i]` is a leap year using the conditions:\n   - A year is a leap year if it is divisible by 4 but not by 100, or if it is divisible by 400.\n\n4. **Day Calculation**:\n   - For each month between `b[i]` and `c[i]` (exclusive of `c[i]`), the program adds the number of days in that month to `sum`.\n   - For leap years, February has 29 days, otherwise, it has 28 days.\n   - The days in other months are added based on typical days in each month (31 for months like January, March, etc., and 30 for months like April, June, etc.).\n\n5. **Output**: After calculating the total days for the months between `b[i]` and `c[i]`, the program checks if this total is divisible by 7. If it is, it prints \"YES\", otherwise \"NO\".\n\n**Potential Issues and Improvements**:\n- The code assumes that the input months `b[i]` and `c[i]` are within the same year and does not handle cases where the months might span multiple years.\n- The code could be optimized by precomputing the days in each month for"
+}

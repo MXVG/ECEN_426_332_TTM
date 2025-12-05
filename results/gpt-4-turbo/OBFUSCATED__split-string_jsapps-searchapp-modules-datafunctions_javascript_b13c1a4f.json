@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/split-string_jsapps-searchapp-modules-datafunctions_javascript_b13c1a4f",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/split-string/jsapps-searchapp-modules-datafunctions.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIurJf4E0agVoz5HvrDpkbAyY84a",
+    "object": "chat.completion",
+    "created": 1764913509,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided appears to be obfuscated JavaScript, commonly used to make the source code difficult to understand and protect it from being easily copied or tampered with. Here’s a breakdown of the main functionalities and components of the code:\n\n1. **Obfuscated Function Wrapper**: The initial function with hexadecimal names is a self-invoking function that seems to be part of the obfuscation mechanism. It likely sets up some mappings or modifies the execution environment in some way.\n\n2. **`getSearchTerm` Function**:\n   - This function retrieves the value from an HTML element (likely an input field) with the ID obtained from the obfuscated code.\n   - It trims the input value and replaces multiple spaces with a single space.\n   - The cleaned-up string is then returned.\n\n3. **`retrieveSearchResults` Function**:\n   - This is an asynchronous function that takes a search term.\n   - It constructs a search URL by calling `getwikiSearchString` with the search term.\n   - It then fetches data from the constructed URL using `requestData`.\n   - If the fetched data contains results, it processes these results using `processWikiResults` and returns them.\n\n4. **`getwikiSearchString` Function**:\n   - Constructs a URL for querying Wikipedia's API based on the search term.\n   - It includes parameters for fetching the page title, extracts, and optionally thumbnails.\n   - The maximum number of characters to fetch is determined by the `getMaxChars` function, which adjusts the limit based on the client's viewport width.\n\n5. **`getMaxChars` Function**:\n   - Determines the maximum number of characters to fetch based on the client's viewport width.\n\n6. **`requestData` Function**:\n   - An asynchronous function that performs a fetch request to the provided URL and returns the JSON response.\n\n7. **`processWikiResults` Function**:\n   - Processes the results from the Wikipedia API.\n   - It iterates over the keys of the result object, extracting necessary details like page ID, title, thumbnail URL, and text extract.\n   - These details are compiled into an array of objects, each representing a search result.\n\n8. **Utility and Helper Functions**:\n   - There are several mappings and utility functions that are used to decode the obfuscated code and facilitate the main functionalities.\n\nThis code is designed to interact with the Wikipedia API, fetching and processing search results based on user input. The use of obfuscation and the specific functionalities suggest that it",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1882,
+      "completion_tokens": 512,
+      "total_tokens": 2394,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided appears to be obfuscated JavaScript, commonly used to make the source code difficult to understand and protect it from being easily copied or tampered with. Here’s a breakdown of the main functionalities and components of the code:\n\n1. **Obfuscated Function Wrapper**: The initial function with hexadecimal names is a self-invoking function that seems to be part of the obfuscation mechanism. It likely sets up some mappings or modifies the execution environment in some way.\n\n2. **`getSearchTerm` Function**:\n   - This function retrieves the value from an HTML element (likely an input field) with the ID obtained from the obfuscated code.\n   - It trims the input value and replaces multiple spaces with a single space.\n   - The cleaned-up string is then returned.\n\n3. **`retrieveSearchResults` Function**:\n   - This is an asynchronous function that takes a search term.\n   - It constructs a search URL by calling `getwikiSearchString` with the search term.\n   - It then fetches data from the constructed URL using `requestData`.\n   - If the fetched data contains results, it processes these results using `processWikiResults` and returns them.\n\n4. **`getwikiSearchString` Function**:\n   - Constructs a URL for querying Wikipedia's API based on the search term.\n   - It includes parameters for fetching the page title, extracts, and optionally thumbnails.\n   - The maximum number of characters to fetch is determined by the `getMaxChars` function, which adjusts the limit based on the client's viewport width.\n\n5. **`getMaxChars` Function**:\n   - Determines the maximum number of characters to fetch based on the client's viewport width.\n\n6. **`requestData` Function**:\n   - An asynchronous function that performs a fetch request to the provided URL and returns the JSON response.\n\n7. **`processWikiResults` Function**:\n   - Processes the results from the Wikipedia API.\n   - It iterates over the keys of the result object, extracting necessary details like page ID, title, thumbnail URL, and text extract.\n   - These details are compiled into an array of objects, each representing a search result.\n\n8. **Utility and Helper Functions**:\n   - There are several mappings and utility functions that are used to decode the obfuscated code and facilitate the main functionalities.\n\nThis code is designed to interact with the Wikipedia API, fetching and processing search results based on user input. The use of obfuscation and the specific functionalities suggest that it"
+}

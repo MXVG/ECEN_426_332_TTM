@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/dead-code-injection_jsapps-todogray-js-todolist_javascript_8e123a4d",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/dead-code-injection/jsapps-todogray-js-todolist.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjInSztOltbllfBET18COf6TAe2kM",
+    "object": "chat.completion",
+    "created": 1764913050,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a JavaScript class named `ToDoList` that has been obfuscated, making it difficult to read and understand at first glance. The code uses hexadecimal naming for functions and variables, and it includes a self-invoking function to manage string mappings for method and property names. Here's a breakdown of the class and its functionality:\n\n### Class: `ToDoList`\n\n#### Properties:\n- `_list`: An array used to store items in the to-do list.\n\n#### Methods:\n1. **`getList`**:\n   - Returns the current list of items.\n\n2. **`clearList`**:\n   - Clears all items from the list, resetting `_list` to an empty array.\n\n3. **`addItemList`**:\n   - Adds a new item to the list.\n   - Parameter: `_0x21f2c2` (the item to be added).\n\n4. **`removeItemFromList`**:\n   - Removes an item from the list based on its `_id`.\n   - Parameter: `_0x2a4262` (the ID of the item to be removed).\n   - This method iterates through the list, and if an item with the matching `_id` is found, it is removed using the `splice` method.\n\n### Obfuscation Details:\n- The code uses a function `a0_0x5981` to manage an array of strings that are likely method names, property names, and other constants.\n- `a0_0x24f0` is a function used to map indices to the actual string values from the array managed by `a0_0x5981`.\n- The self-invoking function at the beginning is used to shuffle or manage the execution flow based on the obfuscated string mappings.\n\n### Example Usage:\n```javascript\nconst myList = new ToDoList();\nmyList.addItemList({ _id: 1, name: \"Buy milk\" });\nmyList.addItemList({ _id: 2, name: \"Read a book\" });\nconsole.log(myList.getList()); // Outputs the current list of items\nmyList.removeItemFromList(1); // Removes the item with _id of 1\nconsole.log(myList.getList()); // Outputs the updated list\nmyList.clearList(); // Clears the list\nconsole.log(myList.getList()); // Outputs an empty list\n```\n\n### Summary:\nThe `ToDoList` class provides basic functionalities of a to-do list application, allowing items to be added, removed, and the",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 972,
+      "completion_tokens": 512,
+      "total_tokens": 1484,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a JavaScript class named `ToDoList` that has been obfuscated, making it difficult to read and understand at first glance. The code uses hexadecimal naming for functions and variables, and it includes a self-invoking function to manage string mappings for method and property names. Here's a breakdown of the class and its functionality:\n\n### Class: `ToDoList`\n\n#### Properties:\n- `_list`: An array used to store items in the to-do list.\n\n#### Methods:\n1. **`getList`**:\n   - Returns the current list of items.\n\n2. **`clearList`**:\n   - Clears all items from the list, resetting `_list` to an empty array.\n\n3. **`addItemList`**:\n   - Adds a new item to the list.\n   - Parameter: `_0x21f2c2` (the item to be added).\n\n4. **`removeItemFromList`**:\n   - Removes an item from the list based on its `_id`.\n   - Parameter: `_0x2a4262` (the ID of the item to be removed).\n   - This method iterates through the list, and if an item with the matching `_id` is found, it is removed using the `splice` method.\n\n### Obfuscation Details:\n- The code uses a function `a0_0x5981` to manage an array of strings that are likely method names, property names, and other constants.\n- `a0_0x24f0` is a function used to map indices to the actual string values from the array managed by `a0_0x5981`.\n- The self-invoking function at the beginning is used to shuffle or manage the execution flow based on the obfuscated string mappings.\n\n### Example Usage:\n```javascript\nconst myList = new ToDoList();\nmyList.addItemList({ _id: 1, name: \"Buy milk\" });\nmyList.addItemList({ _id: 2, name: \"Read a book\" });\nconsole.log(myList.getList()); // Outputs the current list of items\nmyList.removeItemFromList(1); // Removes the item with _id of 1\nconsole.log(myList.getList()); // Outputs the updated list\nmyList.clearList(); // Clears the list\nconsole.log(myList.getList()); // Outputs an empty list\n```\n\n### Summary:\nThe `ToDoList` class provides basic functionalities of a to-do list application, allowing items to be added, removed, and the"
+}

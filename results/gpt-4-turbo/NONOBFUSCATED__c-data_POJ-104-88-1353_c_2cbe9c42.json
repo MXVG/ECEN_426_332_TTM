@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-88-1353_c_2cbe9c42",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-88-1353.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHPRK7UYlgRcKHtFvJn5MVeRVIdT",
+    "object": "chat.completion",
+    "created": 1764907717,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The C program you've provided reads a string from the user, then extracts and prints all sequences of digits (numbers) found in the string, each on a new line. Here's a breakdown of how the program works:\n\n1. **Variable Declaration:**\n   - `char c[50];` declares a character array `c` of size 50 to store the input string.\n   - `int end, i, l;` declares three integer variables. `end` is used as a flag to control when to print a newline, `i` is used for looping, and `l` stores the length of the string.\n\n2. **Input:**\n   - `gets(c);` reads a line of text from the standard input (stdin) and stores it in the array `c`. Note: `gets()` is unsafe and deprecated because it does not check the array bounds and can lead to buffer overflow. It's better to use `fgets(c, sizeof(c), stdin);` instead.\n\n3. **Processing the Input:**\n   - `l = strlen(c);` calculates the length of the string.\n   - `end = 1;` initializes `end` to 1. This variable helps in determining when to print a newline character.\n   - The `for` loop iterates over each character in the string:\n     - `if ((c[i] >= '0') && (c[i] <= '9'))` checks if the current character is a digit.\n       - If true, it prints the digit using `printf(\"%c\", c[i]);`.\n       - `end` is set to 0, indicating that a sequence of digits has started and not yet ended.\n     - `if (((c[i] < '0') || (c[i] > '9')) && (end == 0))` checks if the current character is not a digit and the previous characters were digits (i.e., a sequence of digits has just ended).\n       - If true, it prints a newline character and sets `end` back to 1.\n\n4. **End of Program:**\n   - `return 0;` signifies successful execution of the program.\n\n**Example:**\nIf the user inputs `Hello 123 world 4567!`, the output will be:\n```\n123\n4567\n```\n\n**Security Note:**\nAs mentioned, using `gets()` is unsafe due to potential buffer overflows. It's recommended to use `fgets()` instead, which checks the",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 124,
+      "completion_tokens": 512,
+      "total_tokens": 636,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The C program you've provided reads a string from the user, then extracts and prints all sequences of digits (numbers) found in the string, each on a new line. Here's a breakdown of how the program works:\n\n1. **Variable Declaration:**\n   - `char c[50];` declares a character array `c` of size 50 to store the input string.\n   - `int end, i, l;` declares three integer variables. `end` is used as a flag to control when to print a newline, `i` is used for looping, and `l` stores the length of the string.\n\n2. **Input:**\n   - `gets(c);` reads a line of text from the standard input (stdin) and stores it in the array `c`. Note: `gets()` is unsafe and deprecated because it does not check the array bounds and can lead to buffer overflow. It's better to use `fgets(c, sizeof(c), stdin);` instead.\n\n3. **Processing the Input:**\n   - `l = strlen(c);` calculates the length of the string.\n   - `end = 1;` initializes `end` to 1. This variable helps in determining when to print a newline character.\n   - The `for` loop iterates over each character in the string:\n     - `if ((c[i] >= '0') && (c[i] <= '9'))` checks if the current character is a digit.\n       - If true, it prints the digit using `printf(\"%c\", c[i]);`.\n       - `end` is set to 0, indicating that a sequence of digits has started and not yet ended.\n     - `if (((c[i] < '0') || (c[i] > '9')) && (end == 0))` checks if the current character is not a digit and the previous characters were digits (i.e., a sequence of digits has just ended).\n       - If true, it prints a newline character and sets `end` back to 1.\n\n4. **End of Program:**\n   - `return 0;` signifies successful execution of the program.\n\n**Example:**\nIf the user inputs `Hello 123 world 4567!`, the output will be:\n```\n123\n4567\n```\n\n**Security Note:**\nAs mentioned, using `gets()` is unsafe due to potential buffer overflows. It's recommended to use `fgets()` instead, which checks the"
+}

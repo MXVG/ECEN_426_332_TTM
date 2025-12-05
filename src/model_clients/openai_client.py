@@ -23,6 +23,7 @@ class OpenAIClient(ModelClient):
         timeout: float = 30.0,
         **default_params: Any,
     ) -> None:
+        """Instantiate the client and validate that an API key is available."""
         resolved_key = api_key or os.getenv("OPENAI_API_KEY")
         if not resolved_key:
             raise ValueError("An OpenAI API key must be provided via argument or OPENAI_API_KEY env var.")
@@ -43,6 +44,7 @@ class OpenAIClient(ModelClient):
         )
 
     def generate(self, prompt: str, **kwargs: Any) -> Dict[str, Any]:
+        """Call the OpenAI API with the prompt and return the parsed JSON response."""
         payload = self._build_payload(prompt, **kwargs)
         encoded_payload = json.dumps(payload).encode("utf-8")
         headers = {
@@ -64,6 +66,7 @@ class OpenAIClient(ModelClient):
         return json.loads(body)
 
     def format_response(self, response: Dict[str, Any]) -> str:
+        """Extract a single assistant text string from the OpenAI chat response payload."""
         choices = response.get("choices")
         if not choices:
             return ""
@@ -82,6 +85,7 @@ class OpenAIClient(ModelClient):
         return text if isinstance(text, str) else ""
 
     def _build_payload(self, prompt: str, **kwargs: Any) -> Dict[str, Any]:
+        """Assemble the request body merging defaults, config overrides, and per-call kwargs."""
         config = kwargs.pop("config", None)
         explicit_messages = kwargs.pop("messages", None)
 
@@ -110,4 +114,5 @@ class OpenAIClient(ModelClient):
 
     @staticmethod
     def _prompt_to_messages(prompt: str) -> List[Dict[str, str]]:
+        """Convert a simple prompt string to the chat message list format."""
         return [{"role": "user", "content": prompt}]

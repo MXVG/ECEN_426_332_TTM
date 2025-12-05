@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-14-808_c_4d71c182",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-14-808.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjH8qOFkbNf1oQKHW2lgZdbWPWcm9",
+    "object": "chat.completion",
+    "created": 1764906688,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C program reads a number `n` from the user, which represents the number of students. For each student, the program reads three integers: `id`, `x`, and `y`. It then calculates the sum `z` as `x + y` for each student. The program keeps track of the top three students with the highest values of `z` using three `student` structures: `student1`, `student2`, and `student3`.\n\nHere's a breakdown of the program's functionality:\n\n1. **Structure Definition**: A `struct student` is defined with four fields: `id`, `x`, `y`, and `z`.\n\n2. **Variable Initialization**:\n   - `student1`, `student2`, `student3`, and `studenta` are instances of `struct student`.\n   - `n` is an integer to store the number of students.\n   - `i` is used as a loop counter.\n\n3. **Input**:\n   - The program first reads the integer `n` from the user.\n   - It initializes the `z` values of `student1`, `student2`, and `student3` to 0.\n\n4. **Processing**:\n   - A loop runs `n` times to process each student's data.\n   - Inside the loop, it reads `id`, `x`, and `y` for a temporary student (`studenta`).\n   - It calculates `studenta.z` as the sum of `x` and `y`.\n   - The program then compares `studenta.z` with the `z` values of the top three students (`student1`, `student2`, `student3`) to update the top three records:\n     - If `studenta.z` is greater than `student1.z`, `student1` is updated with `studenta`'s data, and the previous records of `student1` and `student2` are shifted down to `student2` and `student3` respectively.\n     - If `studenta.z` is greater than `student2.z` but not `student1.z`, `student2` is updated with `studenta`'s data, and the previous record of `student2` is shifted down to `student3`.\n     - If `studenta.z` is greater than `student3.z` but not `student2.z`, `student3` is updated with `studenta`'s data.\n\n5. **Output**",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 309,
+      "completion_tokens": 512,
+      "total_tokens": 821,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C program reads a number `n` from the user, which represents the number of students. For each student, the program reads three integers: `id`, `x`, and `y`. It then calculates the sum `z` as `x + y` for each student. The program keeps track of the top three students with the highest values of `z` using three `student` structures: `student1`, `student2`, and `student3`.\n\nHere's a breakdown of the program's functionality:\n\n1. **Structure Definition**: A `struct student` is defined with four fields: `id`, `x`, `y`, and `z`.\n\n2. **Variable Initialization**:\n   - `student1`, `student2`, `student3`, and `studenta` are instances of `struct student`.\n   - `n` is an integer to store the number of students.\n   - `i` is used as a loop counter.\n\n3. **Input**:\n   - The program first reads the integer `n` from the user.\n   - It initializes the `z` values of `student1`, `student2`, and `student3` to 0.\n\n4. **Processing**:\n   - A loop runs `n` times to process each student's data.\n   - Inside the loop, it reads `id`, `x`, and `y` for a temporary student (`studenta`).\n   - It calculates `studenta.z` as the sum of `x` and `y`.\n   - The program then compares `studenta.z` with the `z` values of the top three students (`student1`, `student2`, `student3`) to update the top three records:\n     - If `studenta.z` is greater than `student1.z`, `student1` is updated with `studenta`'s data, and the previous records of `student1` and `student2` are shifted down to `student2` and `student3` respectively.\n     - If `studenta.z` is greater than `student2.z` but not `student1.z`, `student2` is updated with `studenta`'s data, and the previous record of `student2` is shifted down to `student3`.\n     - If `studenta.z` is greater than `student3.z` but not `student2.z`, `student3` is updated with `studenta`'s data.\n\n5. **Output**"
+}

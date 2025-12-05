@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-searchapp-main_javascript_82da6720",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-searchapp-main.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIg3scskCXG3tIptB31dJQp3Z1Mh",
+    "object": "chat.completion",
+    "created": 1764912591,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided appears to be a part of a JavaScript application that uses a search bar to fetch and display search results. It's written in a somewhat obfuscated manner, possibly to protect the code or to minimize it for production use. Let's break down the main components and functionalities of this script:\n\n1. **Obfuscation and Self-Executing Function:**\n   - The script starts with a self-invoking function that seems to be part of an obfuscation technique. This function likely sets up some mappings or encodings used later in the code.\n\n2. **Imports:**\n   - The script imports several functions from different modules (`search-bar.js`, `data-functions.js`, `search-results.js`). These functions handle various aspects of the search functionality like setting focus, clearing text, fetching data, and manipulating search results.\n\n3. **Event Listener for Document Load:**\n   - An event listener is added to the document that triggers the `initApp` function when the document is fully loaded (`DOMContentLoaded` event).\n\n4. **Initialization Function (`initApp`):**\n   - This function sets up the initial state of the application:\n     - Sets the search input focus.\n     - Adds event listeners to the search input for showing and clearing text.\n     - Adds event listeners to the search and clear buttons for their respective functionalities.\n\n5. **Search Submission (`submitSearch`):**\n   - This function is triggered when a search is submitted. It prevents the default form submission behavior, clears previous search results, processes the new search, and resets the search input focus.\n\n6. **Search Processing (`processSearch`):**\n   - This asynchronous function fetches the search term, retrieves results based on this term, and then updates the UI with these results. It also updates the statistics line to reflect the number of results.\n\n7. **Helper Functions:**\n   - Various helper functions are used throughout the script to interact with the UI and handle data. These include functions to clear text, show buttons, fetch and display results, and more.\n\n8. **Obfuscated Function Names and Variables:**\n   - The script uses obfuscated names like `a0_0xa9ca72` and `_0x55b1df`, which make it harder to read and understand without proper context or deobfuscation.\n\nOverall, the script is designed to provide interactive search functionality on a webpage, handling both the UI and data aspects efficiently. The use of modules suggests that the codebase is organized and possibly large, with different functionalities",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1767,
+      "completion_tokens": 512,
+      "total_tokens": 2279,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided appears to be a part of a JavaScript application that uses a search bar to fetch and display search results. It's written in a somewhat obfuscated manner, possibly to protect the code or to minimize it for production use. Let's break down the main components and functionalities of this script:\n\n1. **Obfuscation and Self-Executing Function:**\n   - The script starts with a self-invoking function that seems to be part of an obfuscation technique. This function likely sets up some mappings or encodings used later in the code.\n\n2. **Imports:**\n   - The script imports several functions from different modules (`search-bar.js`, `data-functions.js`, `search-results.js`). These functions handle various aspects of the search functionality like setting focus, clearing text, fetching data, and manipulating search results.\n\n3. **Event Listener for Document Load:**\n   - An event listener is added to the document that triggers the `initApp` function when the document is fully loaded (`DOMContentLoaded` event).\n\n4. **Initialization Function (`initApp`):**\n   - This function sets up the initial state of the application:\n     - Sets the search input focus.\n     - Adds event listeners to the search input for showing and clearing text.\n     - Adds event listeners to the search and clear buttons for their respective functionalities.\n\n5. **Search Submission (`submitSearch`):**\n   - This function is triggered when a search is submitted. It prevents the default form submission behavior, clears previous search results, processes the new search, and resets the search input focus.\n\n6. **Search Processing (`processSearch`):**\n   - This asynchronous function fetches the search term, retrieves results based on this term, and then updates the UI with these results. It also updates the statistics line to reflect the number of results.\n\n7. **Helper Functions:**\n   - Various helper functions are used throughout the script to interact with the UI and handle data. These include functions to clear text, show buttons, fetch and display results, and more.\n\n8. **Obfuscated Function Names and Variables:**\n   - The script uses obfuscated names like `a0_0xa9ca72` and `_0x55b1df`, which make it harder to read and understand without proper context or deobfuscation.\n\nOverall, the script is designed to provide interactive search functionality on a webpage, handling both the UI and data aspects efficiently. The use of modules suggests that the codebase is organized and possibly large, with different functionalities"
+}

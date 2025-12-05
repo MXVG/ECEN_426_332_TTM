@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-crudconlocalstorage-app_javascript_9b16dcb8",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-crudconlocalstorage-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIexDL3q5b69XROe4Q3htIt1vW9s",
+    "object": "chat.completion",
+    "created": 1764912523,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a minified and somewhat obfuscated JavaScript code that appears to manage a task list (or \"to-do list\") with functionalities to add, display, edit, and delete tasks. The code uses local storage to persist data across sessions. Below, I'll break down the main components and functionalities of the code:\n\n### Key Variables and Functions\n\n1. **`a0_0x5baae1` and `a0_0x3d72`**: These functions are used for obfuscation. They map strings to their actual meanings or function names, helping to decode the rest of the code.\n\n2. **`a0_0x98cb`**: This function returns an array of strings that are likely used throughout the code for various purposes, including messages and local storage keys.\n\n3. **`CrearTask`**: This function creates a new task object with properties `actividad` (activity or task description) and `estado` (status, initially set to false, indicating incomplete).\n\n4. **`GuardarDB`**: This function saves the current state of tasks to local storage and then calls `PintarDB` to update the UI.\n\n5. **`PintarDB`**: This function reads tasks from local storage and updates the HTML content of the task list, showing each task and its status.\n\n6. **`EditarDB`**: This function marks a task as completed (changes its `estado` to true) and saves the updated list to local storage.\n\n7. **`EliminarDB`**: This function removes a task from the list and updates local storage.\n\n### Event Listeners\n\n1. **Form Submission**: When the form is submitted, it prevents the default form submission event, retrieves the value of the task input, creates a new task, saves the updated list, and resets the form.\n\n2. **Document Ready**: When the document is fully loaded, it triggers `PintarDB` to render any saved tasks.\n\n3. **Click on Task List**: Handles clicks on the task list. If the click is on a task's \"delete\" icon, it calls `EliminarDB` to delete the task. If the click is on the \"done\" icon, it calls `EditarDB` to mark the task as completed.\n\n### HTML Elements\n\n- **`formularioUI`**: The form element where new tasks are entered.\n- **`listaActividadesUI`**: The container where tasks are displayed.\n\n### Local Storage\n\n- The key used for storing",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2578,
+      "completion_tokens": 512,
+      "total_tokens": 3090,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a minified and somewhat obfuscated JavaScript code that appears to manage a task list (or \"to-do list\") with functionalities to add, display, edit, and delete tasks. The code uses local storage to persist data across sessions. Below, I'll break down the main components and functionalities of the code:\n\n### Key Variables and Functions\n\n1. **`a0_0x5baae1` and `a0_0x3d72`**: These functions are used for obfuscation. They map strings to their actual meanings or function names, helping to decode the rest of the code.\n\n2. **`a0_0x98cb`**: This function returns an array of strings that are likely used throughout the code for various purposes, including messages and local storage keys.\n\n3. **`CrearTask`**: This function creates a new task object with properties `actividad` (activity or task description) and `estado` (status, initially set to false, indicating incomplete).\n\n4. **`GuardarDB`**: This function saves the current state of tasks to local storage and then calls `PintarDB` to update the UI.\n\n5. **`PintarDB`**: This function reads tasks from local storage and updates the HTML content of the task list, showing each task and its status.\n\n6. **`EditarDB`**: This function marks a task as completed (changes its `estado` to true) and saves the updated list to local storage.\n\n7. **`EliminarDB`**: This function removes a task from the list and updates local storage.\n\n### Event Listeners\n\n1. **Form Submission**: When the form is submitted, it prevents the default form submission event, retrieves the value of the task input, creates a new task, saves the updated list, and resets the form.\n\n2. **Document Ready**: When the document is fully loaded, it triggers `PintarDB` to render any saved tasks.\n\n3. **Click on Task List**: Handles clicks on the task list. If the click is on a task's \"delete\" icon, it calls `EliminarDB` to delete the task. If the click is on the \"done\" icon, it calls `EditarDB` to mark the task as completed.\n\n### HTML Elements\n\n- **`formularioUI`**: The form element where new tasks are entered.\n- **`listaActividadesUI`**: The container where tasks are displayed.\n\n### Local Storage\n\n- The key used for storing"
+}

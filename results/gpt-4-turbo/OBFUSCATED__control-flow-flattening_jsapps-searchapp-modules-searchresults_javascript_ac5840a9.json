@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-searchapp-modules-searchresults_javascript_ac5840a9",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-searchapp-modules-searchresults.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIgdOmyKHoCeJ22QTSN8i92nN5YR",
+    "object": "chat.completion",
+    "created": 1764912627,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code snippet you've provided appears to be JavaScript that has been obfuscated, likely to protect its logic or to make it harder to read. This kind of obfuscation is common in scenarios where the code is deployed in environments where it can be easily accessed and read, such as in web browsers. Below, I'll explain the functionality of the code based on the deciphered parts and general structure:\n\n### General Structure\n- The code defines several functions related to manipulating search results on a webpage. It includes functions for deleting existing search results, building new search results, clearing statistics, and setting a statistics line.\n\n### Detailed Breakdown\n\n1. **Obfuscated Initial Function:**\n   - This function seems to be a self-invoking function that performs some operations repeatedly until a certain condition is met. It's hard to determine the exact purpose without the mappings for the obfuscated names.\n\n2. **`deleteSearchResults`:**\n   - This function clears all search results from a specific element on the webpage. It repeatedly removes the last child of the element until there are no more children.\n\n3. **`buildSearchResults`:**\n   - This function takes search results data and dynamically creates HTML elements to display these results. It appears to handle different types of content such as images and text descriptions. Each result is added to a container element in the DOM.\n\n4. **`createResultItem`, `createResultImage`, `createResultText`:**\n   - These functions are helper functions used by `buildSearchResults` to create individual components of a search result item, such as the item container, image, and text elements.\n\n5. **`clearStatsLine`:**\n   - Clears the text content of an element, presumably used to display some statistics or status information.\n\n6. **`setStatsLine`:**\n   - Sets the text content of the statistics/status element based on whether there are results to display or not.\n\n### Usage in a Web Application\nThese functions are likely part of a larger web application dealing with search functionality, where users can enter search queries, and the results need to be dynamically displayed on the page. The statistics line might be used to show how many results were found or to display messages like \"No Results.\"\n\n### Obfuscation Note\nThe obfuscation makes it difficult to modify or understand the code without the original source or the mapping for the obfuscated names (`_0x13cd81`, `_0x41e4d0`, etc.). This is a deliberate choice to secure the code against easy",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2582,
+      "completion_tokens": 512,
+      "total_tokens": 3094,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code snippet you've provided appears to be JavaScript that has been obfuscated, likely to protect its logic or to make it harder to read. This kind of obfuscation is common in scenarios where the code is deployed in environments where it can be easily accessed and read, such as in web browsers. Below, I'll explain the functionality of the code based on the deciphered parts and general structure:\n\n### General Structure\n- The code defines several functions related to manipulating search results on a webpage. It includes functions for deleting existing search results, building new search results, clearing statistics, and setting a statistics line.\n\n### Detailed Breakdown\n\n1. **Obfuscated Initial Function:**\n   - This function seems to be a self-invoking function that performs some operations repeatedly until a certain condition is met. It's hard to determine the exact purpose without the mappings for the obfuscated names.\n\n2. **`deleteSearchResults`:**\n   - This function clears all search results from a specific element on the webpage. It repeatedly removes the last child of the element until there are no more children.\n\n3. **`buildSearchResults`:**\n   - This function takes search results data and dynamically creates HTML elements to display these results. It appears to handle different types of content such as images and text descriptions. Each result is added to a container element in the DOM.\n\n4. **`createResultItem`, `createResultImage`, `createResultText`:**\n   - These functions are helper functions used by `buildSearchResults` to create individual components of a search result item, such as the item container, image, and text elements.\n\n5. **`clearStatsLine`:**\n   - Clears the text content of an element, presumably used to display some statistics or status information.\n\n6. **`setStatsLine`:**\n   - Sets the text content of the statistics/status element based on whether there are results to display or not.\n\n### Usage in a Web Application\nThese functions are likely part of a larger web application dealing with search functionality, where users can enter search queries, and the results need to be dynamically displayed on the page. The statistics line might be used to show how many results were found or to display messages like \"No Results.\"\n\n### Obfuscation Note\nThe obfuscation makes it difficult to modify or understand the code without the original source or the mapping for the obfuscated names (`_0x13cd81`, `_0x41e4d0`, etc.). This is a deliberate choice to secure the code against easy"
+}

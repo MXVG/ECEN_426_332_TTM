@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-searchapp-modules-searchresults_javascript_482d93e6",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-searchapp-modules-searchresults.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHagD0mGDsk3HzDReD6ASOv1zuvH",
+    "object": "chat.completion",
+    "created": 1764908414,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The JavaScript code you've provided defines several functions to manipulate the DOM for a search results page, likely for a web application that fetches and displays data from an API such as Wikipedia. Here's a breakdown of each function and its purpose:\n\n1. **`deleteSearchResults`**:\n   - This function clears all child elements from the parent element with the ID `\"search-results\"`. It does this by repeatedly removing the last child of the parent element until no children remain. This is useful for clearing the results area before displaying new search results.\n\n2. **`buildSearchResults`**:\n   - This function takes an array of result objects and builds a DOM structure to display these results. Each result may include an image and text. It logs the array to the console, iterates over the array, and for each result, it creates a result item, optionally adds an image, and appends text. Each result item is then appended to the parent `\"search-results\"` element.\n\n3. **`createResultItem`**:\n   - This helper function creates a DOM element for a single result item. It constructs a div element with a class `\"result-item\"` and includes a nested anchor element that links to the Wikipedia page corresponding to the result. The anchor's `href` is constructed using the result's ID, and it opens in a new tab (`target=\"_blank\"`).\n\n4. **`createResultImage`**:\n   - This function creates a DOM element specifically for the image of a result. It creates a div with a class `\"result-image\"`, includes an `img` element where the `src` is set to the result's image URL and the `alt` text is the result's title.\n\n5. **`createResultText`**:\n   - This function handles the creation of the text part of a result. It creates a div with a class `\"result-text\"` and includes a paragraph with the class `\"result-description\"`, where the text content is set to the result's text.\n\n6. **`clearStatsLine`**:\n   - This function clears the text content of the element with the ID `\"stats\"`, which is likely used to display statistics about the search results (e.g., number of results).\n\n7. **`setStatsLine`**:\n   - This function updates the text content of the `\"stats\"` element to reflect the number of search results displayed. If there are results, it shows the count; otherwise, it displays \"No Results\".\n\nThis set of functions provides",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 507,
+      "completion_tokens": 512,
+      "total_tokens": 1019,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The JavaScript code you've provided defines several functions to manipulate the DOM for a search results page, likely for a web application that fetches and displays data from an API such as Wikipedia. Here's a breakdown of each function and its purpose:\n\n1. **`deleteSearchResults`**:\n   - This function clears all child elements from the parent element with the ID `\"search-results\"`. It does this by repeatedly removing the last child of the parent element until no children remain. This is useful for clearing the results area before displaying new search results.\n\n2. **`buildSearchResults`**:\n   - This function takes an array of result objects and builds a DOM structure to display these results. Each result may include an image and text. It logs the array to the console, iterates over the array, and for each result, it creates a result item, optionally adds an image, and appends text. Each result item is then appended to the parent `\"search-results\"` element.\n\n3. **`createResultItem`**:\n   - This helper function creates a DOM element for a single result item. It constructs a div element with a class `\"result-item\"` and includes a nested anchor element that links to the Wikipedia page corresponding to the result. The anchor's `href` is constructed using the result's ID, and it opens in a new tab (`target=\"_blank\"`).\n\n4. **`createResultImage`**:\n   - This function creates a DOM element specifically for the image of a result. It creates a div with a class `\"result-image\"`, includes an `img` element where the `src` is set to the result's image URL and the `alt` text is the result's title.\n\n5. **`createResultText`**:\n   - This function handles the creation of the text part of a result. It creates a div with a class `\"result-text\"` and includes a paragraph with the class `\"result-description\"`, where the text content is set to the result's text.\n\n6. **`clearStatsLine`**:\n   - This function clears the text content of the element with the ID `\"stats\"`, which is likely used to display statistics about the search results (e.g., number of results).\n\n7. **`setStatsLine`**:\n   - This function updates the text content of the `\"stats\"` element to reflect the number of search results displayed. If there are results, it shows the count; otherwise, it displays \"No Results\".\n\nThis set of functions provides"
+}

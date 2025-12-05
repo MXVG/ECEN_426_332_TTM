@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-53-467_c_2093034d",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-53-467.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHGZqnMxRW5QOUojnjgDCN2je0Vy",
+    "object": "chat.completion",
+    "created": 1764907167,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code is designed to read a list of integers from the user, remove duplicates, and then print the unique integers in the order they were first entered. Here's a breakdown of how the code works:\n\n1. **Variable Declaration and Initialization:**\n   - `int a[300]={0}`: An array `a` of 300 integers is declared and initialized to zero.\n   - `int i, j, b, n`: Variables `i`, `j`, and `b` are declared for loop control and other purposes, and `n` for storing the number of integers the user will input.\n\n2. **Input:**\n   - `scanf(\"%d\", &n)`: The program reads an integer `n` from the user, which represents the number of integers the user will subsequently input.\n   - `for(i=1; i<=n; i++) scanf(\"%d\", &a[i-1])`: The program reads `n` integers into the array `a`, starting from index 0 to `n-1`.\n\n3. **Removing Duplicates:**\n   - The outer loop `for(i=1; i<=n; i++)` iterates through each element of the array.\n   - The inner loop `for(j=i+1; j<=n; j++)` checks for duplicates of the current element `a[i-1]`.\n   - If a duplicate is found (`if(a[j-1] == a[i-1])`), it is set to zero (`a[j-1] = 0`).\n\n4. **Output:**\n   - The final loop `for(i=0, b=0; i<=n-1; i++)` iterates through the array to print the unique integers.\n   - `if(a[i] != 0 && b == 0)`: If the current element is non-zero and it's the first unique element to be printed, it prints without a comma.\n   - `if(a[i] != 0 && b != 0)`: For subsequent non-zero elements, they are printed with a preceding comma.\n   - `b` is used as a flag to check if any number has been printed yet.\n\n5. **Return Statement:**\n   - `return 0;`: The main function returns 0, indicating successful execution.\n\n**Example Execution:**\n- If the user inputs `n = 5` and the integers `3 1 3 2 1`, the",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 180,
+      "completion_tokens": 512,
+      "total_tokens": 692,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code is designed to read a list of integers from the user, remove duplicates, and then print the unique integers in the order they were first entered. Here's a breakdown of how the code works:\n\n1. **Variable Declaration and Initialization:**\n   - `int a[300]={0}`: An array `a` of 300 integers is declared and initialized to zero.\n   - `int i, j, b, n`: Variables `i`, `j`, and `b` are declared for loop control and other purposes, and `n` for storing the number of integers the user will input.\n\n2. **Input:**\n   - `scanf(\"%d\", &n)`: The program reads an integer `n` from the user, which represents the number of integers the user will subsequently input.\n   - `for(i=1; i<=n; i++) scanf(\"%d\", &a[i-1])`: The program reads `n` integers into the array `a`, starting from index 0 to `n-1`.\n\n3. **Removing Duplicates:**\n   - The outer loop `for(i=1; i<=n; i++)` iterates through each element of the array.\n   - The inner loop `for(j=i+1; j<=n; j++)` checks for duplicates of the current element `a[i-1]`.\n   - If a duplicate is found (`if(a[j-1] == a[i-1])`), it is set to zero (`a[j-1] = 0`).\n\n4. **Output:**\n   - The final loop `for(i=0, b=0; i<=n-1; i++)` iterates through the array to print the unique integers.\n   - `if(a[i] != 0 && b == 0)`: If the current element is non-zero and it's the first unique element to be printed, it prints without a comma.\n   - `if(a[i] != 0 && b != 0)`: For subsequent non-zero elements, they are printed with a preceding comma.\n   - `b` is used as a flag to check if any number has been printed yet.\n\n5. **Return Statement:**\n   - `return 0;`: The main function returns 0, indicating successful execution.\n\n**Example Execution:**\n- If the user inputs `n = 5` and the integers `3 1 3 2 1`, the"
+}

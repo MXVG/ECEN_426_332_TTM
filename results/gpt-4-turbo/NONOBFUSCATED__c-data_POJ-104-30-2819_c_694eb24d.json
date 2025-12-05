@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-30-2819_c_694eb24d",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-30-2819.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHC0g7CVdh9e6KVC3M4JXW7kbaPf",
+    "object": "chat.completion",
+    "created": 1764906884,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C++ code snippet is a program that reads an integer `n` from the user, then calculates the sum of the squares of all numbers from 1 to `n` that do not have the digit 7 in any place and are not divisible by 7. The result is then printed to the standard output.\n\nHere's a breakdown of the code:\n\n1. **Variable Declarations:**\n   - `int n`: The upper limit of the range, input by the user.\n   - `int s=0`: A variable to store the sum of squares.\n   - `int a, b, c, i`: Temporary variables used in the loop. `a` is used to check divisibility by 7, `b` and `c` to check for the presence of the digit 7 in the units and tens place respectively.\n\n2. **Input:**\n   - `cin >> n;`: Reads the integer `n` from the user.\n\n3. **Loop:**\n   - The `for` loop iterates from 1 to `n`.\n   - `a = i % 7;`: Checks if `i` is divisible by 7.\n   - `b = i % 10;`: Extracts the last digit (units place) of `i`.\n   - `c = i / 10;`: Extracts the second last digit (tens place) of `i`.\n   - The nested `if` conditions check:\n     - `if (a != 0)`: `i` should not be divisible by 7.\n     - `if (b != 7)`: The last digit of `i` should not be 7.\n     - `if (c != 7)`: The second last digit of `i` should not be 7.\n   - If all conditions are met, `s = s + i * i;`: Adds the square of `i` to `s`.\n\n4. **Output:**\n   - `cout << s << endl;`: Prints the calculated sum `s`.\n\n5. **Return:**\n   - `return 0;`: Standard return for `main` indicating successful execution.\n\n**Example Usage:**\nIf the user inputs `20`, the program will calculate the sum of the squares of numbers from 1 to 20 that are not divisible by 7 and do not contain the digit 7. This would include numbers like 1, 2, 3, 4, 5",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 90,
+      "completion_tokens": 512,
+      "total_tokens": 602,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C++ code snippet is a program that reads an integer `n` from the user, then calculates the sum of the squares of all numbers from 1 to `n` that do not have the digit 7 in any place and are not divisible by 7. The result is then printed to the standard output.\n\nHere's a breakdown of the code:\n\n1. **Variable Declarations:**\n   - `int n`: The upper limit of the range, input by the user.\n   - `int s=0`: A variable to store the sum of squares.\n   - `int a, b, c, i`: Temporary variables used in the loop. `a` is used to check divisibility by 7, `b` and `c` to check for the presence of the digit 7 in the units and tens place respectively.\n\n2. **Input:**\n   - `cin >> n;`: Reads the integer `n` from the user.\n\n3. **Loop:**\n   - The `for` loop iterates from 1 to `n`.\n   - `a = i % 7;`: Checks if `i` is divisible by 7.\n   - `b = i % 10;`: Extracts the last digit (units place) of `i`.\n   - `c = i / 10;`: Extracts the second last digit (tens place) of `i`.\n   - The nested `if` conditions check:\n     - `if (a != 0)`: `i` should not be divisible by 7.\n     - `if (b != 7)`: The last digit of `i` should not be 7.\n     - `if (c != 7)`: The second last digit of `i` should not be 7.\n   - If all conditions are met, `s = s + i * i;`: Adds the square of `i` to `s`.\n\n4. **Output:**\n   - `cout << s << endl;`: Prints the calculated sum `s`.\n\n5. **Return:**\n   - `return 0;`: Standard return for `main` indicating successful execution.\n\n**Example Usage:**\nIf the user inputs `20`, the program will calculate the sum of the squares of numbers from 1 to 20 that are not divisible by 7 and do not contain the digit 7. This would include numbers like 1, 2, 3, 4, 5"
+}

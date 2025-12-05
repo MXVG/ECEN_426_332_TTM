@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-ajaxexternalapi-app_javascript_5f0a15ff",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-ajaxexternalapi-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIeFrIMMOqDtbFLjJ5EbXUCvAuOl",
+    "object": "chat.completion",
+    "created": 1764912479,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided JavaScript code is a minified and obfuscated script that involves fetching and displaying financial data (specifically, exchange rates for the US dollar and Bitcoin) from the \"mindicador.cl\" API. The script is structured to handle user interactions through buttons on a webpage, fetch data upon these interactions, and then display the results in a specific HTML element. Here's a breakdown of the key components and functionality:\n\n1. **Obfuscated Function Names and Variables**: The code uses hexadecimal and encoded function names and variable names (e.g., `a0_0x7042`, `_0x49527a`) to make it harder to understand at first glance. This is a common technique in JavaScript obfuscation to protect the code from being easily readable and modified.\n\n2. **Initialization and Self-Invoking Function**: The script initializes some mappings and arrays with a self-invoking function to set up the environment and obfuscate string values.\n\n3. **Event Listeners**: The script adds event listeners to two buttons identified by their IDs (`#dolar` and `#bitcoin`). When clicked, these buttons trigger the `obtenerDatos` function with either \"dolar\" or \"bitcoin\" as an argument to fetch the respective data.\n\n4. **Data Fetching (`obtenerDatos` function)**:\n   - Constructs a URL using the base \"https://mindicador.cl/api/\" appended by the argument (either \"dolar\" or \"bitcoin\").\n   - Uses `XMLHttpRequest` to asynchronously fetch data from the constructed URL.\n   - Once the data is fetched, it triggers the `respuesta` function to handle the response.\n\n5. **Response Handling (`respuesta` function)**:\n   - Checks if the HTTP status is 200 (OK) and the readyState is 4 (request finished and response is ready).\n   - Parses the JSON response and logs it to the console.\n   - Clears the inner HTML of an element identified by `#resultado`.\n   - Iterates over the data (expected to be in an array format), constructing and appending formatted strings to the `#resultado` element to display each item. It formats each item as a list entry showing the date and value, and stops after 15 entries.\n\n6. **HTML Manipulation**: The script dynamically updates the inner HTML of the element with ID `#resultado` to display the fetched data in a user-friendly format.\n\n7. **Debugging and Logging**: The script logs a smiley face `:D` and the parsed JSON",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1526,
+      "completion_tokens": 512,
+      "total_tokens": 2038,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided JavaScript code is a minified and obfuscated script that involves fetching and displaying financial data (specifically, exchange rates for the US dollar and Bitcoin) from the \"mindicador.cl\" API. The script is structured to handle user interactions through buttons on a webpage, fetch data upon these interactions, and then display the results in a specific HTML element. Here's a breakdown of the key components and functionality:\n\n1. **Obfuscated Function Names and Variables**: The code uses hexadecimal and encoded function names and variable names (e.g., `a0_0x7042`, `_0x49527a`) to make it harder to understand at first glance. This is a common technique in JavaScript obfuscation to protect the code from being easily readable and modified.\n\n2. **Initialization and Self-Invoking Function**: The script initializes some mappings and arrays with a self-invoking function to set up the environment and obfuscate string values.\n\n3. **Event Listeners**: The script adds event listeners to two buttons identified by their IDs (`#dolar` and `#bitcoin`). When clicked, these buttons trigger the `obtenerDatos` function with either \"dolar\" or \"bitcoin\" as an argument to fetch the respective data.\n\n4. **Data Fetching (`obtenerDatos` function)**:\n   - Constructs a URL using the base \"https://mindicador.cl/api/\" appended by the argument (either \"dolar\" or \"bitcoin\").\n   - Uses `XMLHttpRequest` to asynchronously fetch data from the constructed URL.\n   - Once the data is fetched, it triggers the `respuesta` function to handle the response.\n\n5. **Response Handling (`respuesta` function)**:\n   - Checks if the HTTP status is 200 (OK) and the readyState is 4 (request finished and response is ready).\n   - Parses the JSON response and logs it to the console.\n   - Clears the inner HTML of an element identified by `#resultado`.\n   - Iterates over the data (expected to be in an array format), constructing and appending formatted strings to the `#resultado` element to display each item. It formats each item as a list entry showing the date and value, and stops after 15 entries.\n\n6. **HTML Manipulation**: The script dynamically updates the inner HTML of the element with ID `#resultado` to display the fetched data in a user-friendly format.\n\n7. **Debugging and Logging**: The script logs a smiley face `:D` and the parsed JSON"
+}

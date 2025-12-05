@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-rockpapersissors-app_javascript_e3e4b17e",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-rockpapersissors-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHZhOURYXpVPzpVP6vg8U7rJw1ZS",
+    "object": "chat.completion",
+    "created": 1764908353,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The JavaScript code you provided defines a simple rock-paper-scissors game that can be played in a web browser. The game is structured as a single function `game()` that encapsulates all the game logic and is immediately invoked at the end of the script. Here's a breakdown of the different parts of the code and how they work together:\n\n### Structure and Initialization\n- **`game()` function**: This is the main function that contains all the game logic. It initializes player and computer scores (`pScore` and `cScore`) and defines several nested functions that handle different aspects of the game.\n- **`startGame()` function**: This function sets up the initial interaction, where clicking the \"Play\" button fades out the intro screen and fades in the game screen.\n- **`playMatch()` function**: This function sets up the game mechanics. It listens for clicks on the player's choice buttons (rock, paper, scissors), generates a random choice for the computer, and then compares the two choices to determine the winner.\n- **`compareHands()` function**: This function compares the player's choice and the computer's choice, updates the game state accordingly, and displays the result.\n- **`updateScore()` function**: This function updates the displayed scores based on the current values of `pScore` and `cScore`.\n\n### Game Flow\n1. **Starting the Game**: When the page loads, the `game()` function is called. Inside this function, `startGame()` is immediately invoked, setting up the listener for the \"Play\" button.\n2. **Playing a Match**: After the intro screen is faded out, the `playMatch()` function is called. This function waits for the player to make a choice among rock, paper, or scissors.\n3. **Animation and Delay**: When a choice is made, both the player's and computer's hands animate for 2 seconds to simulate shaking (like shaking hands before revealing the choice). After the animation, the choices are revealed, and the `compareHands()` function is called.\n4. **Comparing Choices and Updating Scores**: The `compareHands()` function determines the winner based on the rules of rock-paper-scissors, updates the scores, and displays the result.\n5. **Updating the Display**: The `updateScore()` function updates the text content of the score display elements to reflect the new scores.\n\n### HTML and CSS Requirements\nFor this script to work, your HTML should include:\n- An intro screen section with a button to start the game.\n- A",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 663,
+      "completion_tokens": 512,
+      "total_tokens": 1175,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The JavaScript code you provided defines a simple rock-paper-scissors game that can be played in a web browser. The game is structured as a single function `game()` that encapsulates all the game logic and is immediately invoked at the end of the script. Here's a breakdown of the different parts of the code and how they work together:\n\n### Structure and Initialization\n- **`game()` function**: This is the main function that contains all the game logic. It initializes player and computer scores (`pScore` and `cScore`) and defines several nested functions that handle different aspects of the game.\n- **`startGame()` function**: This function sets up the initial interaction, where clicking the \"Play\" button fades out the intro screen and fades in the game screen.\n- **`playMatch()` function**: This function sets up the game mechanics. It listens for clicks on the player's choice buttons (rock, paper, scissors), generates a random choice for the computer, and then compares the two choices to determine the winner.\n- **`compareHands()` function**: This function compares the player's choice and the computer's choice, updates the game state accordingly, and displays the result.\n- **`updateScore()` function**: This function updates the displayed scores based on the current values of `pScore` and `cScore`.\n\n### Game Flow\n1. **Starting the Game**: When the page loads, the `game()` function is called. Inside this function, `startGame()` is immediately invoked, setting up the listener for the \"Play\" button.\n2. **Playing a Match**: After the intro screen is faded out, the `playMatch()` function is called. This function waits for the player to make a choice among rock, paper, or scissors.\n3. **Animation and Delay**: When a choice is made, both the player's and computer's hands animate for 2 seconds to simulate shaking (like shaking hands before revealing the choice). After the animation, the choices are revealed, and the `compareHands()` function is called.\n4. **Comparing Choices and Updating Scores**: The `compareHands()` function determines the winner based on the rules of rock-paper-scissors, updates the scores, and displays the result.\n5. **Updating the Display**: The `updateScore()` function updates the text content of the score display elements to reflect the new scores.\n\n### HTML and CSS Requirements\nFor this script to work, your HTML should include:\n- An intro screen section with a button to start the game.\n- A"
+}

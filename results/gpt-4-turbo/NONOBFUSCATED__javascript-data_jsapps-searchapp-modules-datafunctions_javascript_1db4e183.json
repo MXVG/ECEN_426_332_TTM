@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-searchapp-modules-datafunctions_javascript_1db4e183",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-searchapp-modules-datafunctions.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHaDtg0aIFXY8E43mkkmDBn0ZWOF",
+    "object": "chat.completion",
+    "created": 1764908385,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided JavaScript code defines a set of functions designed to interact with the Wikipedia API to fetch and process search results based on a user's input. Here's a breakdown of each function and its purpose:\n\n1. **`getSearchTerm`**:\n   - Retrieves the search term from an HTML input element with the id `\"search\"`.\n   - Trims the search term and replaces multiple spaces with a single space.\n   - Returns the cleaned search term.\n\n2. **`retrieveSearchResults`**:\n   - Accepts a search term, constructs a search string URL using `getwikiSearchString`, and fetches data from the Wikipedia API.\n   - Processes the returned data if it contains a `\"query\"` property, using the `processWikiResults` function.\n   - Returns an array of search results.\n\n3. **`getwikiSearchString`**:\n   - Constructs the URL for the Wikipedia API request.\n   - Uses `getMaxChars` to determine the number of characters for the extracts based on the screen width.\n   - Encodes the URL to handle special characters in the search term properly.\n\n4. **`getMaxChars`**:\n   - Determines the maximum number of characters for the text extracts based on the client's screen width.\n   - Returns different values based on specific screen width breakpoints.\n\n5. **`requestData`**:\n   - Performs the actual API request using the `fetch` API.\n   - Parses the JSON response and returns it.\n   - Handles errors by logging them to the console.\n\n6. **`processWikiResults`**:\n   - Processes the results from the Wikipedia API query.\n   - Extracts relevant data (id, title, text, and image) for each result and stores it in an array.\n   - Handles cases where the thumbnail image might not be present.\n\n### Usage Example:\nTo use these functions, you would typically have an HTML input element where users can type their search queries. When a search is triggered (e.g., by pressing a button or hitting enter), you would call `retrieveSearchResults` with the term obtained from `getSearchTerm`. The results can then be displayed on your webpage.\n\n### Additional Notes:\n- The code assumes the presence of an HTML element with the id `\"search\"`.\n- Error handling in `requestData` is basic, logging errors to the console. Depending on the application, you might want to handle these more gracefully (e.g., displaying error messages to users).\n- The API URL includes `origin=*` to handle CORS",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 478,
+      "completion_tokens": 512,
+      "total_tokens": 990,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided JavaScript code defines a set of functions designed to interact with the Wikipedia API to fetch and process search results based on a user's input. Here's a breakdown of each function and its purpose:\n\n1. **`getSearchTerm`**:\n   - Retrieves the search term from an HTML input element with the id `\"search\"`.\n   - Trims the search term and replaces multiple spaces with a single space.\n   - Returns the cleaned search term.\n\n2. **`retrieveSearchResults`**:\n   - Accepts a search term, constructs a search string URL using `getwikiSearchString`, and fetches data from the Wikipedia API.\n   - Processes the returned data if it contains a `\"query\"` property, using the `processWikiResults` function.\n   - Returns an array of search results.\n\n3. **`getwikiSearchString`**:\n   - Constructs the URL for the Wikipedia API request.\n   - Uses `getMaxChars` to determine the number of characters for the extracts based on the screen width.\n   - Encodes the URL to handle special characters in the search term properly.\n\n4. **`getMaxChars`**:\n   - Determines the maximum number of characters for the text extracts based on the client's screen width.\n   - Returns different values based on specific screen width breakpoints.\n\n5. **`requestData`**:\n   - Performs the actual API request using the `fetch` API.\n   - Parses the JSON response and returns it.\n   - Handles errors by logging them to the console.\n\n6. **`processWikiResults`**:\n   - Processes the results from the Wikipedia API query.\n   - Extracts relevant data (id, title, text, and image) for each result and stores it in an array.\n   - Handles cases where the thumbnail image might not be present.\n\n### Usage Example:\nTo use these functions, you would typically have an HTML input element where users can type their search queries. When a search is triggered (e.g., by pressing a button or hitting enter), you would call `retrieveSearchResults` with the term obtained from `getSearchTerm`. The results can then be displayed on your webpage.\n\n### Additional Notes:\n- The code assumes the presence of an HTML element with the id `\"search\"`.\n- Error handling in `requestData` is basic, logging errors to the console. Depending on the application, you might want to handle these more gracefully (e.g., displaying error messages to users).\n- The API URL includes `origin=*` to handle CORS"
+}

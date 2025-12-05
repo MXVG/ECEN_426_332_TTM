@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/split-string_jsapps-weatherapp-skycons_javascript_886f76a9",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/split-string/jsapps-weatherapp-skycons.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIwnkI8lnHXLHYfks0KegcM0Yome",
+    "object": "chat.completion",
+    "created": 1764913629,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a minified and obfuscated JavaScript code that defines a function called `Skycons`. This function is designed to create animated weather icons using HTML5 canvas. The code appears to handle different weather conditions such as clear day, cloudy night, rain, snow, wind, fog, and more. It uses various canvas drawing techniques to animate these icons based on the weather condition provided.\n\nHere's a breakdown of the main components and functionalities:\n\n1. **Initialization and Polyfills**:\n   - The code starts by defining polyfills for `requestAnimationFrame` and `cancelAnimationFrame` to ensure compatibility across different browsers.\n\n2. **Utility Functions**:\n   - Several utility functions are defined for drawing specific shapes and patterns on the canvas, such as circles, lines, and arcs, which are used to compose the weather icons.\n\n3. **Weather Drawing Functions**:\n   - Specific functions are defined for each weather condition (e.g., `CLEAR_DAY`, `CLOUDY_NIGHT`, `RAIN`). These functions use the utility functions to draw the appropriate icons.\n\n4. **Skycons Constructor and Prototype**:\n   - The `Skycons` function acts as a constructor for creating a new set of weather icons. It initializes properties such as the list of icons and their settings.\n   - The prototype of `Skycons` is extended with methods like `add`, `set`, `remove`, `draw`, `play`, and `pause`. These methods manage the icons, control their animation, and handle updates.\n\n5. **Animation Control**:\n   - The `play` method sets up an interval using `requestAnimationFrame` to continuously update and animate the icons based on the current time.\n   - The `pause` method stops the animation by canceling the animation frame request.\n\n6. **Usage**:\n   - To use `Skycons`, you would typically create an instance of `Skycons`, add canvas elements to it where the icons should be displayed, set the weather condition for each canvas, and then start the animation.\n\nHere is an example of how you might use `Skycons` in a webpage:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Skycons Example</title>\n</head>\n<body>\n    <canvas id=\"icon1\" width=\"128\" height=\"128\"></canvas>\n    <script src=\"skycons.js\"></script>\n    <script>\n        var skycons = new Skycons({\"color\": \"pink",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 14315,
+      "completion_tokens": 512,
+      "total_tokens": 14827,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a minified and obfuscated JavaScript code that defines a function called `Skycons`. This function is designed to create animated weather icons using HTML5 canvas. The code appears to handle different weather conditions such as clear day, cloudy night, rain, snow, wind, fog, and more. It uses various canvas drawing techniques to animate these icons based on the weather condition provided.\n\nHere's a breakdown of the main components and functionalities:\n\n1. **Initialization and Polyfills**:\n   - The code starts by defining polyfills for `requestAnimationFrame` and `cancelAnimationFrame` to ensure compatibility across different browsers.\n\n2. **Utility Functions**:\n   - Several utility functions are defined for drawing specific shapes and patterns on the canvas, such as circles, lines, and arcs, which are used to compose the weather icons.\n\n3. **Weather Drawing Functions**:\n   - Specific functions are defined for each weather condition (e.g., `CLEAR_DAY`, `CLOUDY_NIGHT`, `RAIN`). These functions use the utility functions to draw the appropriate icons.\n\n4. **Skycons Constructor and Prototype**:\n   - The `Skycons` function acts as a constructor for creating a new set of weather icons. It initializes properties such as the list of icons and their settings.\n   - The prototype of `Skycons` is extended with methods like `add`, `set`, `remove`, `draw`, `play`, and `pause`. These methods manage the icons, control their animation, and handle updates.\n\n5. **Animation Control**:\n   - The `play` method sets up an interval using `requestAnimationFrame` to continuously update and animate the icons based on the current time.\n   - The `pause` method stops the animation by canceling the animation frame request.\n\n6. **Usage**:\n   - To use `Skycons`, you would typically create an instance of `Skycons`, add canvas elements to it where the icons should be displayed, set the weather condition for each canvas, and then start the animation.\n\nHere is an example of how you might use `Skycons` in a webpage:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Skycons Example</title>\n</head>\n<body>\n    <canvas id=\"icon1\" width=\"128\" height=\"128\"></canvas>\n    <script src=\"skycons.js\"></script>\n    <script>\n        var skycons = new Skycons({\"color\": \"pink"
+}

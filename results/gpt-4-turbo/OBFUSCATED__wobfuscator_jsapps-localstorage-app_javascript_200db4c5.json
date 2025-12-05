@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/wobfuscator_jsapps-localstorage-app_javascript_200db4c5",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/wobfuscator/jsapps-localstorage-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIzG4qzEklqvAYpaYnFyo3CAgaRA",
+    "object": "chat.completion",
+    "created": 1764913782,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you provided is a complex JavaScript application that utilizes WebAssembly modules for various functionalities. It appears to be designed for a web environment where it manipulates the DOM, handles events, and interacts with `localStorage`. Below, I'll break down the key components and functionalities of the code:\n\n### Key Components:\n\n1. **WebAssembly Modules**:\n   - The code uses several WebAssembly modules (`__ifWasmModule`, `__callWasmModule`, and `__wasmStringModules`) which are initialized from Base64-encoded strings. These modules are used to perform specific tasks, likely including conditional logic and event handling.\n\n2. **Universal Base64 to Byte Array Function (`__universalAtob`)**:\n   - This function converts a Base64 encoded string into a `Uint8Array`. It tries to use the browser's `atob` function and falls back to Node.js's `Buffer.from` if `atob` fails (e.g., in a Node.js environment).\n\n3. **String Extraction from WebAssembly Memory (`lS`)**:\n   - This function retrieves strings from the memory of WebAssembly instances. It appears to be used for getting configuration or data stored in the WebAssembly memory, such as class names, event types, and localStorage keys.\n\n4. **Event Handlers (`agregarBotones`, `delegacion`)**:\n   - `agregarBotones`: Adds buttons with different classes to the DOM.\n   - `delegacion`: Handles click events on these buttons and changes the class of a DOM element based on the button clicked.\n\n5. **LocalStorage Interaction**:\n   - The application reads from and writes to `localStorage`, storing and retrieving configuration or state data.\n\n6. **DOM Manipulation**:\n   - The script queries DOM elements and attaches event listeners. It also modifies class names based on interactions, affecting the styling of elements.\n\n### Workflow:\n\n1. **Initialization**:\n   - WebAssembly modules are initialized from Base64 strings.\n   - Strings (like selectors and event types) are extracted from WebAssembly memory.\n\n2. **Setting Up Event Listeners**:\n   - Event listeners are added to certain DOM elements to handle clicks and other events.\n\n3. **Event Handling**:\n   - When events occur (e.g., button clicks), the application responds by changing DOM elements' classes and updating `localStorage`.\n\n4. **Conditional Logic**:\n   - Some WebAssembly modules are used to execute conditional logic, deciding which class to apply to a DOM element or what",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3264,
+      "completion_tokens": 512,
+      "total_tokens": 3776,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you provided is a complex JavaScript application that utilizes WebAssembly modules for various functionalities. It appears to be designed for a web environment where it manipulates the DOM, handles events, and interacts with `localStorage`. Below, I'll break down the key components and functionalities of the code:\n\n### Key Components:\n\n1. **WebAssembly Modules**:\n   - The code uses several WebAssembly modules (`__ifWasmModule`, `__callWasmModule`, and `__wasmStringModules`) which are initialized from Base64-encoded strings. These modules are used to perform specific tasks, likely including conditional logic and event handling.\n\n2. **Universal Base64 to Byte Array Function (`__universalAtob`)**:\n   - This function converts a Base64 encoded string into a `Uint8Array`. It tries to use the browser's `atob` function and falls back to Node.js's `Buffer.from` if `atob` fails (e.g., in a Node.js environment).\n\n3. **String Extraction from WebAssembly Memory (`lS`)**:\n   - This function retrieves strings from the memory of WebAssembly instances. It appears to be used for getting configuration or data stored in the WebAssembly memory, such as class names, event types, and localStorage keys.\n\n4. **Event Handlers (`agregarBotones`, `delegacion`)**:\n   - `agregarBotones`: Adds buttons with different classes to the DOM.\n   - `delegacion`: Handles click events on these buttons and changes the class of a DOM element based on the button clicked.\n\n5. **LocalStorage Interaction**:\n   - The application reads from and writes to `localStorage`, storing and retrieving configuration or state data.\n\n6. **DOM Manipulation**:\n   - The script queries DOM elements and attaches event listeners. It also modifies class names based on interactions, affecting the styling of elements.\n\n### Workflow:\n\n1. **Initialization**:\n   - WebAssembly modules are initialized from Base64 strings.\n   - Strings (like selectors and event types) are extracted from WebAssembly memory.\n\n2. **Setting Up Event Listeners**:\n   - Event listeners are added to certain DOM elements to handle clicks and other events.\n\n3. **Event Handling**:\n   - When events occur (e.g., button clicks), the application responds by changing DOM elements' classes and updating `localStorage`.\n\n4. **Conditional Logic**:\n   - Some WebAssembly modules are used to execute conditional logic, deciding which class to apply to a DOM element or what"
+}

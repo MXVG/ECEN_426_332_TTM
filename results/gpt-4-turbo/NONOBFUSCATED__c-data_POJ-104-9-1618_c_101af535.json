@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-9-1618_c_101af535",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-9-1618.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHQ1R2z013sH0WL2aL9gd1Az0SFo",
+    "object": "chat.completion",
+    "created": 1764907753,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C code defines a linked list of `Patient` structures and includes functions to create the list, sort it based on specific criteria, and print the sorted list. The `Patient` structure holds a patient number (`num`) and age (`age`), along with a pointer to the next patient in the list (`next`). Here's a breakdown of the code and its functionality:\n\n### Structure Definition\n```c\nstruct Patient {\n    char num[10];\n    int age;\n    struct Patient *next;\n};\n```\nThis defines a `Patient` structure with a patient number, age, and a pointer to the next patient.\n\n### Main Function\n```c\nint main() {\n    int n, i;\n    struct Patient *head;\n    scanf(\"%d\", &n);\n    head = creat(n);\n    paixu(n, head);\n    for (i = 0; i < n; i++) {\n        printf(\"%s\\n\", head->num);\n        head = head->next;\n    }\n}\n```\n- Reads the number of patients (`n`).\n- Creates a linked list of patients using `creat(n)`.\n- Sorts the list using `paixu(n, head)`.\n- Prints the sorted list.\n\n### Create Function\n```c\nstruct Patient *creat(int n) {\n    int i;\n    struct Patient *head, *thispoint, *nextpoint;\n    for (i = 0; i < n; i++) {\n        nextpoint = (struct Patient *)malloc(sizeof(struct Patient));\n        scanf(\"%s %d\", nextpoint->num, &nextpoint->age);\n        if (i == 0) {\n            head = nextpoint;\n            thispoint = head;\n        } else {\n            thispoint->next = nextpoint;\n            thispoint = nextpoint;\n        }\n    }\n    thispoint->next = NULL;\n    return head;\n}\n```\n- Dynamically allocates memory for `n` patients.\n- Reads patient data from input.\n- Links each new patient to the list.\n\n### Sorting Function\n```c\nvoid paixu(int n, struct Patient *head) {\n    // Sorting logic here\n}\n```\n- First, it moves patients aged 60 and above to the front of the list.\n- Then, it sorts the patients aged 60 and above by age in descending order.\n\n### Detailed Sorting Explanation\n- The first loop identifies patients under 60 and swaps them with the next patient over 59 found later",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 730,
+      "completion_tokens": 512,
+      "total_tokens": 1242,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C code defines a linked list of `Patient` structures and includes functions to create the list, sort it based on specific criteria, and print the sorted list. The `Patient` structure holds a patient number (`num`) and age (`age`), along with a pointer to the next patient in the list (`next`). Here's a breakdown of the code and its functionality:\n\n### Structure Definition\n```c\nstruct Patient {\n    char num[10];\n    int age;\n    struct Patient *next;\n};\n```\nThis defines a `Patient` structure with a patient number, age, and a pointer to the next patient.\n\n### Main Function\n```c\nint main() {\n    int n, i;\n    struct Patient *head;\n    scanf(\"%d\", &n);\n    head = creat(n);\n    paixu(n, head);\n    for (i = 0; i < n; i++) {\n        printf(\"%s\\n\", head->num);\n        head = head->next;\n    }\n}\n```\n- Reads the number of patients (`n`).\n- Creates a linked list of patients using `creat(n)`.\n- Sorts the list using `paixu(n, head)`.\n- Prints the sorted list.\n\n### Create Function\n```c\nstruct Patient *creat(int n) {\n    int i;\n    struct Patient *head, *thispoint, *nextpoint;\n    for (i = 0; i < n; i++) {\n        nextpoint = (struct Patient *)malloc(sizeof(struct Patient));\n        scanf(\"%s %d\", nextpoint->num, &nextpoint->age);\n        if (i == 0) {\n            head = nextpoint;\n            thispoint = head;\n        } else {\n            thispoint->next = nextpoint;\n            thispoint = nextpoint;\n        }\n    }\n    thispoint->next = NULL;\n    return head;\n}\n```\n- Dynamically allocates memory for `n` patients.\n- Reads patient data from input.\n- Links each new patient to the list.\n\n### Sorting Function\n```c\nvoid paixu(int n, struct Patient *head) {\n    // Sorting logic here\n}\n```\n- First, it moves patients aged 60 and above to the front of the list.\n- Then, it sorts the patients aged 60 and above by age in descending order.\n\n### Detailed Sorting Explanation\n- The first loop identifies patients under 60 and swaps them with the next patient over 59 found later"
+}

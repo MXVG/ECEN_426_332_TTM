@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/control-flow-flattening_jsapps-simpletodolistapp-app_javascript_b52decfe",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/control-flow-flattening/jsapps-simpletodolistapp-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjIgpT21620bQVMYqmgIv2MBElsyM",
+    "object": "chat.completion",
+    "created": 1764912639,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided code is a JavaScript snippet that appears to be obfuscated. It includes functionality for a simple to-do list application where users can add and remove items. Below, I will explain the functionality of the code in a more readable format:\n\n### Key Components:\n\n1. **HTML Elements**:\n   - `todoForm`: The form element where users input their to-do items.\n   - `todoInput`: The input field for entering to-do items.\n   - `itemList`: The list where to-do items are displayed.\n\n2. **Event Listeners**:\n   - An event listener is attached to `todoForm` to handle the form submission. When the form is submitted, it checks if the input is empty. If not empty, it calls `addItem` function.\n\n3. **Functions**:\n   - `inputoEmpty`: Logs a message to the console indicating that the input is empty.\n   - `addItem`: Adds the entered item to the `itemList` and clears the input field.\n   - `removeItem`: Removes an item from the list when the corresponding remove button is clicked.\n\n### Detailed Breakdown:\n\n1. **Initialization**:\n   - The script retrieves elements by their IDs (`todoForm`, `todoInput`, `itemList`).\n\n2. **Form Submission Handling**:\n   - Prevents the default form submission behavior.\n   - Checks if the input field (`todoInput`) is empty. If it is, it calls `inputoEmpty` and stops further execution.\n   - If the input is not empty, it calls `addItem` with the value of the input field.\n\n3. **Adding Items**:\n   - Constructs an HTML string for the new list item, which includes the input value and a remove button.\n   - Inserts this HTML into `itemList` at the beginning.\n   - Clears the input field and sets focus back to it for the next entry.\n\n4. **Removing Items**:\n   - The `removeItem` function is called when the remove button (`x`) next to a to-do item is clicked.\n   - It removes the parent element (the `li` element) of the button from the DOM, effectively deleting the item from the list.\n\n### Obfuscation Details:\n- The code uses hexadecimal function names and variable names (`a0_0x5eea0f`, `a0_0x567d`, etc.) which are typical in obfuscated JavaScript to make it harder to understand and modify.\n- The actual strings and method names are mapped",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1288,
+      "completion_tokens": 512,
+      "total_tokens": 1800,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided code is a JavaScript snippet that appears to be obfuscated. It includes functionality for a simple to-do list application where users can add and remove items. Below, I will explain the functionality of the code in a more readable format:\n\n### Key Components:\n\n1. **HTML Elements**:\n   - `todoForm`: The form element where users input their to-do items.\n   - `todoInput`: The input field for entering to-do items.\n   - `itemList`: The list where to-do items are displayed.\n\n2. **Event Listeners**:\n   - An event listener is attached to `todoForm` to handle the form submission. When the form is submitted, it checks if the input is empty. If not empty, it calls `addItem` function.\n\n3. **Functions**:\n   - `inputoEmpty`: Logs a message to the console indicating that the input is empty.\n   - `addItem`: Adds the entered item to the `itemList` and clears the input field.\n   - `removeItem`: Removes an item from the list when the corresponding remove button is clicked.\n\n### Detailed Breakdown:\n\n1. **Initialization**:\n   - The script retrieves elements by their IDs (`todoForm`, `todoInput`, `itemList`).\n\n2. **Form Submission Handling**:\n   - Prevents the default form submission behavior.\n   - Checks if the input field (`todoInput`) is empty. If it is, it calls `inputoEmpty` and stops further execution.\n   - If the input is not empty, it calls `addItem` with the value of the input field.\n\n3. **Adding Items**:\n   - Constructs an HTML string for the new list item, which includes the input value and a remove button.\n   - Inserts this HTML into `itemList` at the beginning.\n   - Clears the input field and sets focus back to it for the next entry.\n\n4. **Removing Items**:\n   - The `removeItem` function is called when the remove button (`x`) next to a to-do item is clicked.\n   - It removes the parent element (the `li` element) of the button from the DOM, effectively deleting the item from the list.\n\n### Obfuscation Details:\n- The code uses hexadecimal function names and variable names (`a0_0x5eea0f`, `a0_0x567d`, etc.) which are typical in obfuscated JavaScript to make it harder to understand and modify.\n- The actual strings and method names are mapped"
+}

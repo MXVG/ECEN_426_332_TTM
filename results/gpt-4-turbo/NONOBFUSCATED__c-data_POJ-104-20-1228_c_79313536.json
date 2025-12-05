@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/c-data_POJ-104-20-1228_c_79313536",
+  "source_path": "data/raw/nonobfuscated/c-data/POJ-104-20-1228.c",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHA6czS90yWgply4Z7YBKl6wwkQV",
+    "object": "chat.completion",
+    "created": 1764906766,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided C program reads two strings repeatedly from the standard input until the end of file (EOF) is reached. The first string, `str`, can be up to 10 characters long, and the second string, `subs`, can be up to 3 characters long. The program then performs the following operations:\n\n1. **Input Reading**: The program uses `scanf` to read the two strings `str` and `subs`.\n\n2. **Finding the Maximum Character**: The program determines the position `max` of the lexicographically largest character in `str`. This is done by iterating through the string and updating `max` whenever a character greater than the current maximum is found.\n\n3. **String Manipulation and Output**: The program constructs a new string by:\n   - Printing characters from `str` up to and including the character at position `max`.\n   - Printing the entire `subs` string immediately after the character at position `max`.\n   - Continuing to print the rest of `str` after the `max` position.\n   - Printing a newline character after the modified string.\n\n4. **Looping Until EOF**: The entire process repeats for each pair of strings until EOF is encountered.\n\n### Example:\nIf the input is:\n```\nhello hi\nabc xyz\n```\n\nThe output will be:\n```\nhellohi\nabxyzc\n```\n\nIn the first case:\n- The largest character in \"hello\" is 'o' (position 4).\n- The program outputs \"hello\", then \"hi\", and then nothing (since there are no characters after 'o' in \"hello\").\n\nIn the second case:\n- The largest character in \"abc\" is 'c' (position 2).\n- The program outputs \"ab\", then \"xyz\", and then \"c\".\n\nThis program effectively inserts the second string right after the largest character in the first string.",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 145,
+      "completion_tokens": 383,
+      "total_tokens": 528,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided C program reads two strings repeatedly from the standard input until the end of file (EOF) is reached. The first string, `str`, can be up to 10 characters long, and the second string, `subs`, can be up to 3 characters long. The program then performs the following operations:\n\n1. **Input Reading**: The program uses `scanf` to read the two strings `str` and `subs`.\n\n2. **Finding the Maximum Character**: The program determines the position `max` of the lexicographically largest character in `str`. This is done by iterating through the string and updating `max` whenever a character greater than the current maximum is found.\n\n3. **String Manipulation and Output**: The program constructs a new string by:\n   - Printing characters from `str` up to and including the character at position `max`.\n   - Printing the entire `subs` string immediately after the character at position `max`.\n   - Continuing to print the rest of `str` after the `max` position.\n   - Printing a newline character after the modified string.\n\n4. **Looping Until EOF**: The entire process repeats for each pair of strings until EOF is encountered.\n\n### Example:\nIf the input is:\n```\nhello hi\nabc xyz\n```\n\nThe output will be:\n```\nhellohi\nabxyzc\n```\n\nIn the first case:\n- The largest character in \"hello\" is 'o' (position 4).\n- The program outputs \"hello\", then \"hi\", and then nothing (since there are no characters after 'o' in \"hello\").\n\nIn the second case:\n- The largest character in \"abc\" is 'c' (position 2).\n- The program outputs \"ab\", then \"xyz\", and then \"c\".\n\nThis program effectively inserts the second string right after the largest character in the first string."
+}

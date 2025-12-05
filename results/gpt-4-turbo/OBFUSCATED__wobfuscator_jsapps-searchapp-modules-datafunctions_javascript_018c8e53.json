@@ -1,0 +1,42 @@
+{
+  "identifier": "OBFUSCATED/wobfuscator_jsapps-searchapp-modules-datafunctions_javascript_018c8e53",
+  "source_path": "C:/Users/MX/Desktop/Training_Data_Loader/data/raw/obfuscated/javascript-data/wobfuscator/jsapps-searchapp-modules-datafunctions.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjJ0I4dA5pT52X7A770PlasConYVf",
+    "object": "chat.completion",
+    "created": 1764913846,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The provided JavaScript code is a complex example that integrates WebAssembly modules with JavaScript to perform various tasks, including string manipulation, data fetching, and conditional logic based on screen size. Here's a breakdown of the key components and functionalities:\n\n### WebAssembly Modules\n1. **Base64 Decoding and Module Creation**: The code defines functions to decode base64 strings and create WebAssembly modules from them. This is done using the `atob` function for decoding and `Uint8Array` for handling binary data. If `atob` fails (possibly due to running in a Node.js environment), it falls back to `Buffer.from`.\n\n2. **WebAssembly Instances**: Multiple WebAssembly instances are created from the decoded modules. These instances are used to execute specific tasks, such as determining the maximum number of characters based on screen width or processing search results.\n\n### Utility Functions\n- **`__universalAtob`**: A universal function to decode base64 strings that works both in browser and Node.js environments.\n- **`lS`**: A function to extract strings from WebAssembly memory. It handles both single and multiple WebAssembly module indices.\n\n### Search Functionality\n- **`getSearchTerm`**: Extracts and processes a search term from a DOM element. It uses the `lS` function to retrieve the ID of the input element and to replace multiple spaces with a single space in the search term.\n- **`retrieveSearchResults`**: Fetches and processes search results from Wikipedia based on the search term. It constructs a search URL, fetches data, and processes the results using WebAssembly instances for conditional logic.\n\n### Helper Functions for Search\n- **`getwikiSearchString`**: Constructs a Wikipedia API search URL using the search term and maximum character limits.\n- **`getMaxChars`**: Determines the maximum number of characters for the search excerpts based on the screen width, using WebAssembly instances for conditional checks.\n- **`requestData`**: Performs the API request and handles errors using a WebAssembly instance to log errors.\n\n### Processing Results\n- **`processWikiResults`**: Processes the fetched Wikipedia data to format it into a structured array of results, using WebAssembly for adding items to the array.\n\n### Error Handling and Logging\n- WebAssembly is also used for error handling and logging, demonstrating an advanced use case where JavaScript's capabilities are extended with WebAssembly for specific tasks.\n\n### Overall Structure and Execution\nThe code is structured to use modern JavaScript features like async/await for asynchronous operations, template literals for",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1968,
+      "completion_tokens": 512,
+      "total_tokens": 2480,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The provided JavaScript code is a complex example that integrates WebAssembly modules with JavaScript to perform various tasks, including string manipulation, data fetching, and conditional logic based on screen size. Here's a breakdown of the key components and functionalities:\n\n### WebAssembly Modules\n1. **Base64 Decoding and Module Creation**: The code defines functions to decode base64 strings and create WebAssembly modules from them. This is done using the `atob` function for decoding and `Uint8Array` for handling binary data. If `atob` fails (possibly due to running in a Node.js environment), it falls back to `Buffer.from`.\n\n2. **WebAssembly Instances**: Multiple WebAssembly instances are created from the decoded modules. These instances are used to execute specific tasks, such as determining the maximum number of characters based on screen width or processing search results.\n\n### Utility Functions\n- **`__universalAtob`**: A universal function to decode base64 strings that works both in browser and Node.js environments.\n- **`lS`**: A function to extract strings from WebAssembly memory. It handles both single and multiple WebAssembly module indices.\n\n### Search Functionality\n- **`getSearchTerm`**: Extracts and processes a search term from a DOM element. It uses the `lS` function to retrieve the ID of the input element and to replace multiple spaces with a single space in the search term.\n- **`retrieveSearchResults`**: Fetches and processes search results from Wikipedia based on the search term. It constructs a search URL, fetches data, and processes the results using WebAssembly instances for conditional logic.\n\n### Helper Functions for Search\n- **`getwikiSearchString`**: Constructs a Wikipedia API search URL using the search term and maximum character limits.\n- **`getMaxChars`**: Determines the maximum number of characters for the search excerpts based on the screen width, using WebAssembly instances for conditional checks.\n- **`requestData`**: Performs the API request and handles errors using a WebAssembly instance to log errors.\n\n### Processing Results\n- **`processWikiResults`**: Processes the fetched Wikipedia data to format it into a structured array of results, using WebAssembly for adding items to the array.\n\n### Error Handling and Logging\n- WebAssembly is also used for error handling and logging, demonstrating an advanced use case where JavaScript's capabilities are extended with WebAssembly for specific tasks.\n\n### Overall Structure and Execution\nThe code is structured to use modern JavaScript features like async/await for asynchronous operations, template literals for"
+}

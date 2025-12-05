@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-searchapp-main_javascript_564fcd08",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-searchapp-main.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHZw6ZKHrNscSAxVoiQfV8tq4X45",
+    "object": "chat.completion",
+    "created": 1764908368,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided is a JavaScript module that handles a search functionality in a web application. It's structured to work with a modular design, separating concerns into different modules for better maintainability and readability. Here's a breakdown of the functionality and the flow of the code:\n\n### Modules and Their Functions\n\n1. **search-bar.js**\n   - `setSearchFocus()`: Sets focus to the search input field.\n   - `showClearTextButton()`: Shows a button to clear the search input when there is text in the input field.\n   - `clearSearchText()`: Clears the text from the search input field.\n   - `clearPushListener()`: Handles the 'keydown' event for accessibility, allowing the clear operation to be triggered by keyboard events.\n\n2. **data-functions.js**\n   - `getSearchTerm()`: Retrieves the current search term from the input field.\n   - `retrieveSearchResults(searchTerm)`: Fetches search results based on the provided search term, likely from an API or local data source.\n\n3. **search-results.js**\n   - `deleteSearchResults()`: Clears current search results from the display/UI.\n   - `buildSearchResults(resultArray)`: Renders the search results onto the UI.\n   - `clearStatsLine()`: Clears any previous statistics or status messages related to search results.\n   - `setStatsLine(count)`: Displays statistics or status messages based on the count of search results.\n\n### Event Listeners and Initial Setup\n\n- The script listens for the `readystatechange` event on the document to ensure the DOM is fully loaded (`complete`). Once loaded, it calls `initApp()` to set up initial configurations and event listeners.\n  \n- `initApp()` function:\n  - Sets focus to the search input immediately upon app initialization.\n  - Adds an event listener to the search input to show a clear text button when there is input.\n  - Adds click and keydown event listeners to the clear button to allow clearing the search text both via mouse and keyboard.\n  - Adds a submit event listener to the search form to handle search submission.\n\n### Search Handling\n\n- `submitSearch(e)`: Prevents the default form submission to handle the search programmatically. It clears any previous search results, processes the new search, and resets the focus to the search input.\n\n- `processSearch()`: \n  - Clears any previous stats line.\n  - Retrieves the current search term and exits if the term is empty.\n  - Calls `retrieveSearchResults()` to get the",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 282,
+      "completion_tokens": 512,
+      "total_tokens": 794,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided is a JavaScript module that handles a search functionality in a web application. It's structured to work with a modular design, separating concerns into different modules for better maintainability and readability. Here's a breakdown of the functionality and the flow of the code:\n\n### Modules and Their Functions\n\n1. **search-bar.js**\n   - `setSearchFocus()`: Sets focus to the search input field.\n   - `showClearTextButton()`: Shows a button to clear the search input when there is text in the input field.\n   - `clearSearchText()`: Clears the text from the search input field.\n   - `clearPushListener()`: Handles the 'keydown' event for accessibility, allowing the clear operation to be triggered by keyboard events.\n\n2. **data-functions.js**\n   - `getSearchTerm()`: Retrieves the current search term from the input field.\n   - `retrieveSearchResults(searchTerm)`: Fetches search results based on the provided search term, likely from an API or local data source.\n\n3. **search-results.js**\n   - `deleteSearchResults()`: Clears current search results from the display/UI.\n   - `buildSearchResults(resultArray)`: Renders the search results onto the UI.\n   - `clearStatsLine()`: Clears any previous statistics or status messages related to search results.\n   - `setStatsLine(count)`: Displays statistics or status messages based on the count of search results.\n\n### Event Listeners and Initial Setup\n\n- The script listens for the `readystatechange` event on the document to ensure the DOM is fully loaded (`complete`). Once loaded, it calls `initApp()` to set up initial configurations and event listeners.\n  \n- `initApp()` function:\n  - Sets focus to the search input immediately upon app initialization.\n  - Adds an event listener to the search input to show a clear text button when there is input.\n  - Adds click and keydown event listeners to the clear button to allow clearing the search text both via mouse and keyboard.\n  - Adds a submit event listener to the search form to handle search submission.\n\n### Search Handling\n\n- `submitSearch(e)`: Prevents the default form submission to handle the search programmatically. It clears any previous search results, processes the new search, and resets the focus to the search input.\n\n- `processSearch()`: \n  - Clears any previous stats line.\n  - Retrieves the current search term and exits if the term is empty.\n  - Calls `retrieveSearchResults()` to get the"
+}

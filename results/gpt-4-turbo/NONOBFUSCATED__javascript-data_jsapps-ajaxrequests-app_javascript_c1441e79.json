@@ -1,0 +1,42 @@
+{
+  "identifier": "NONOBFUSCATED/javascript-data_jsapps-ajaxrequests-app_javascript_c1441e79",
+  "source_path": "data/raw/nonobfuscated/javascript-data/jsapps-ajaxrequests-app.js",
+  "model": "gpt-4-turbo",
+  "response": {
+    "id": "chatcmpl-CjHYK9ZXweJo7C6q6mJBEYChY3L63",
+    "object": "chat.completion",
+    "created": 1764908268,
+    "model": "gpt-4-turbo-2024-04-09",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The code you've provided is a simple example of how to use the `XMLHttpRequest` object to fetch data from a server asynchronously and display it on a web page when a button is clicked. Here's a breakdown of each part of the code:\n\n1. **Selecting the Button Element:**\n   ```javascript\n   let boton = document.querySelector('#boton');\n   ```\n   This line selects the HTML element with the ID `boton` (presumably a button) and stores it in the variable `boton`.\n\n2. **Adding an Event Listener:**\n   ```javascript\n   boton.addEventListener('click', traerDatos);\n   ```\n   This line adds an event listener to the button that triggers the function `traerDatos` when the button is clicked.\n\n3. **The `traerDatos` Function:**\n   This function is called when the button is clicked. It handles creating an `XMLHttpRequest`, sending it, and processing the response.\n\n   - **Creating and Opening the XMLHttpRequest:**\n     ```javascript\n     const xhttp = new XMLHttpRequest();\n     xhttp.open('GET', 'ajax-text.txt', true);\n     ```\n     Here, a new `XMLHttpRequest` object is created and configured to fetch data using the GET method from the file `ajax-text.txt`. The third parameter `true` indicates that the request should be handled asynchronously.\n\n   - **Sending the Request:**\n     ```javascript\n     xhttp.send();\n     ```\n     This line sends the request to the server.\n\n   - **Handling the Response:**\n     ```javascript\n     xhttp.onreadystatechange = function() {\n         if (this.readyState == 4 && this.status == 200) {\n             console.log(this.responseText);\n             document.querySelector('#respuesta').innerHTML = this.responseText;\n         }\n     };\n     ```\n     This function is assigned to the `onreadystatechange` event of the `xhttp` object. It checks if the request is complete (`readyState == 4`) and successful (`status == 200`). If so, it logs the response text to the console and sets the inner HTML of the element with the ID `respuesta` to the response text, effectively displaying it on the web page.\n\nThis code is a basic example of using AJAX to update a part of a web page without needing to reload the entire page. It's useful for creating more dynamic, responsive web applications. However, it's worth noting that `XMLHttpRequest` is somewhat old technology, and modern applications often use the `fetch` API for handling HTTP requests due to its simpler",
+          "refusal": null,
+          "annotations": []
+        },
+        "logprobs": null,
+        "finish_reason": "length"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 101,
+      "completion_tokens": 512,
+      "total_tokens": 613,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      }
+    },
+    "service_tier": "default",
+    "system_fingerprint": "fp_de235176ee"
+  },
+  "formatted_text": "The code you've provided is a simple example of how to use the `XMLHttpRequest` object to fetch data from a server asynchronously and display it on a web page when a button is clicked. Here's a breakdown of each part of the code:\n\n1. **Selecting the Button Element:**\n   ```javascript\n   let boton = document.querySelector('#boton');\n   ```\n   This line selects the HTML element with the ID `boton` (presumably a button) and stores it in the variable `boton`.\n\n2. **Adding an Event Listener:**\n   ```javascript\n   boton.addEventListener('click', traerDatos);\n   ```\n   This line adds an event listener to the button that triggers the function `traerDatos` when the button is clicked.\n\n3. **The `traerDatos` Function:**\n   This function is called when the button is clicked. It handles creating an `XMLHttpRequest`, sending it, and processing the response.\n\n   - **Creating and Opening the XMLHttpRequest:**\n     ```javascript\n     const xhttp = new XMLHttpRequest();\n     xhttp.open('GET', 'ajax-text.txt', true);\n     ```\n     Here, a new `XMLHttpRequest` object is created and configured to fetch data using the GET method from the file `ajax-text.txt`. The third parameter `true` indicates that the request should be handled asynchronously.\n\n   - **Sending the Request:**\n     ```javascript\n     xhttp.send();\n     ```\n     This line sends the request to the server.\n\n   - **Handling the Response:**\n     ```javascript\n     xhttp.onreadystatechange = function() {\n         if (this.readyState == 4 && this.status == 200) {\n             console.log(this.responseText);\n             document.querySelector('#respuesta').innerHTML = this.responseText;\n         }\n     };\n     ```\n     This function is assigned to the `onreadystatechange` event of the `xhttp` object. It checks if the request is complete (`readyState == 4`) and successful (`status == 200`). If so, it logs the response text to the console and sets the inner HTML of the element with the ID `respuesta` to the response text, effectively displaying it on the web page.\n\nThis code is a basic example of using AJAX to update a part of a web page without needing to reload the entire page. It's useful for creating more dynamic, responsive web applications. However, it's worth noting that `XMLHttpRequest` is somewhat old technology, and modern applications often use the `fetch` API for handling HTTP requests due to its simpler"
+}
